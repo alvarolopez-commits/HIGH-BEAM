@@ -1,0 +1,7 @@
+*.bak-*.html
+index.bak-*.html
+assets/BACKGROUNDS/
+assets/Logos/
+*.pdf
+.DS_Store
+Thumbs.db
