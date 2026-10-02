@@ -63,16 +63,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #stage[data-scene="3"] #aura .b2{transform:translate(78.1vw,46.3vh)}
 #stage[data-scene="3"] #aura .b3{transform:translate(-26vw,27.8vh)}
 #stage[data-scene="4"] #aura{opacity:0}
-#stage[data-scene="5"] #aura .b1{transform:translate(54.7vw,-38.9vh) scale(1.25)}
-#stage[data-scene="5"] #aura .b2{transform:translate(78.1vw,-14.8vh);opacity:.7}
-#stage[data-scene="5"] #aura .b3{transform:translate(-26vw,38.9vh)}
+#stage.hbz #aura .b1{transform:translate(54.7vw,-38.9vh) scale(1.25)}
+#stage.hbz #aura .b2{transform:translate(78.1vw,-14.8vh);opacity:.7}
+#stage.hbz #aura .b3{transform:translate(-26vw,38.9vh)}
 
 /* ---------- Fondos por bloque: Intelligence (cromado) · Solutions (flujo) · HighBeam (haces) ---------- */
 #bgs{position:absolute;inset:0;z-index:0;pointer-events:none}
 #bgs .bg{position:absolute;inset:0;opacity:0;transform:scale(1.05);background-size:cover;background-position:center;background-repeat:no-repeat;
   transition:opacity 1.1s var(--e) 1.1s,transform 2.6s var(--eo)}
 #stage[data-scene="0"] .bg.b0,#stage[data-scene="1"] .bg.b1,#stage[data-scene="2"] .bg.b2,
-#stage[data-scene="3"] .bg.b3,#stage[data-scene="5"] .bg.b5{opacity:1;transform:none;z-index:1;transition:opacity 1.1s var(--e),transform 2.6s var(--eo)}
+#stage[data-scene="3"] .bg.b3,#stage.hbz .bg.b5{opacity:1;transform:none;z-index:1;transition:opacity 1.1s var(--e),transform 2.6s var(--eo)}
 #stage[data-scene="4"] #bgs .bg{transition-delay:0s,0s}
 #bgs .b0{background-image:linear-gradient(90deg,rgba(3,6,15,.86) 0%,rgba(3,6,15,.35) 46%,rgba(3,6,15,0) 100%),linear-gradient(0deg,rgba(3,6,15,.7),rgba(3,6,15,0) 40%),url(assets/bg/flow-01.jpg)}
 #bgs .b1{background-image:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.45) 40%,rgba(3,6,15,.12) 100%),url(assets/bg/flow-02.jpg)}
@@ -266,29 +266,29 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pillar h3{font-size:max(26px,calc(var(--u)*2.4));font-weight:400;letter-spacing:-.04em;color:var(--t1);line-height:1;white-space:nowrap;transition:font-size .7s var(--eo),height .7s var(--eo)}
 .pillar .tl{margin-top:max(8px,calc(var(--u)*.73));font-size:max(16px,calc(var(--u)*1.35));font-weight:500;letter-spacing:-.02em;color:var(--sky);transition:opacity .4s var(--e)}
 .pillar p{margin-top:max(6px,calc(var(--u)*.5));font-size:max(14px,calc(var(--u)*1.04));line-height:1.45;color:var(--t2);max-width:max(240px,calc(var(--u)*23));min-height:calc(2.9*max(15px,var(--u)*1.2));transition:opacity .4s var(--e),min-height .9s var(--eo)}
-.s03.st-2 .pillar.sol p{min-height:0}
+.s03.st-1 .pillar.sol p{min-height:0}
 .s03 .sw{position:relative}
 .s03 .sw>div{transition:opacity .45s var(--e),transform .6s var(--eo)}
 .s03 .t-b{position:absolute;left:0;top:calc(max(8px,calc(var(--u)*.73))*-1);width:100%}
 .s03 .t-b{opacity:0;transform:translateY(10px);pointer-events:none}
 .s03 .t-b p{min-height:0;max-width:max(300px,calc(var(--u)*46));text-wrap:balance}
-.s03.st-1 .t-a{opacity:0;transform:translateY(-8px)}
-.s03.st-1 .t-b{opacity:1;transform:none;transition:opacity .7s var(--eo) .3s,transform .8s var(--eo) .3s}
-.s03.st-1 .pillar:not(.sol){flex-grow:.6;opacity:.38;filter:saturate(.3)}
-.s03.st-1 .pillar:not(.sol) p,.s03.st-1 .pillar:not(.sol) .tl{opacity:0;white-space:nowrap;overflow:hidden}
-.s03.st-1 .pillar:not(.sol) h3{font-size:max(16px,calc(var(--u)*1.35));line-height:1.12;height:max(26px,calc(var(--u)*2.4));white-space:normal}
-.s03.st-1 .pillar.sol{flex-grow:2.6}
-.s03.st-1 .pillar.sol img{opacity:.85;transform:scale(1.04)}
-.s03.st-1 .pillar.sol .edge{box-shadow:inset 0 0 0 1.5px rgba(139,205,255,.8),inset 0 1px 0 rgba(255,255,255,.4),0 0 80px rgba(63,124,255,.35)}
+.s03.st-1 .t-a, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .t-a{opacity:0;transform:translateY(-8px)}
+.s03.st-1 .t-b, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .t-b{opacity:1;transform:none;transition:opacity .7s var(--eo) .3s,transform .8s var(--eo) .3s}
+.s03.st-1 .pillar:not(.sol), .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar:not(.sol){flex-grow:.6;opacity:.38;filter:saturate(.3)}
+.s03.st-1 .pillar:not(.sol) p, .s03.st-1 .pillar:not(.sol) .tl, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar:not(.sol) p, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar:not(.sol) .tl{opacity:0;white-space:nowrap;overflow:hidden}
+.s03.st-1 .pillar:not(.sol) h3, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar:not(.sol) h3{font-size:max(16px,calc(var(--u)*1.35));line-height:1.12;height:max(26px,calc(var(--u)*2.4));white-space:normal}
+.s03.st-1 .pillar.sol, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar.sol{flex-grow:2.6}
+.s03.st-1 .pillar.sol img, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar.sol img{opacity:.85;transform:scale(1.04)}
+.s03.st-1 .pillar.sol .edge, .s03:not(.st-1) .pillars:has(.pillar.sol:hover) .pillar.sol .edge{box-shadow:inset 0 0 0 1.5px rgba(139,205,255,.8),inset 0 1px 0 rgba(255,255,255,.4),0 0 80px rgba(63,124,255,.35)}
 /* Solutions se expande hacia la siguiente pantalla */
-.s03.st-2{overflow:hidden}
-.s03.st-2 .pillars{gap:0;margin:calc(var(--py)*-1 - var(--u)*16) calc(var(--px)*-1) calc(var(--pb)*-1 - var(--u)*9)}
-.s03.st-2 .pillar:not(.sol){flex-grow:0;opacity:0;min-width:0}
-.s03.st-2 .pillar.sol{flex-grow:1;border-radius:0}
+.s03.st-1{overflow:hidden}
+.s03.st-1 .pillars{gap:0;margin:calc(var(--py)*-1 - var(--u)*16) calc(var(--px)*-1) calc(var(--pb)*-1 - var(--u)*9)}
+.s03.st-1 .pillar:not(.sol){flex-grow:0;opacity:0;min-width:0}
+.s03.st-1 .pillar.sol{flex-grow:1;border-radius:0}
 .pillar .txt{transition:bottom .9s var(--eo),left .9s var(--eo)}
-.s03.st-2 .pillar.sol .txt{bottom:calc(var(--pb) + var(--u)*3.2);left:var(--px)}
-.s03.st-2 .pillar.sol .top{left:var(--px);top:calc(var(--py) + var(--u)*.5)}
-.s03.st-2 .head,.s03.st-2 .strip{opacity:0}
+.s03.st-1 .pillar.sol .txt{bottom:calc(var(--pb) + var(--u)*3.2);left:var(--px)}
+.s03.st-1 .pillar.sol .top{left:var(--px);top:calc(var(--py) + var(--u)*.5)}
+.s03.st-1 .head,.s03.st-1 .strip{opacity:0}
 .strip{display:flex;justify-content:space-between;align-items:baseline;gap:max(12px,calc(var(--u)*1.5));padding-top:max(12px,calc(var(--u)*1.1));border-top:1px solid var(--edge);transition:opacity .6s var(--e)}
 .kp{display:flex;align-items:baseline;gap:max(8px,calc(var(--u)*.7));min-width:0}
 .kp b{font-size:max(22px,calc(var(--u)*2.2));font-weight:400;letter-spacing:-.04em;line-height:1;color:var(--t1)}
@@ -308,7 +308,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .s04 .crumb{color:rgba(214,228,248,.7)}
 .s04 .sup{margin-top:calc(var(--u)*1.1);font-size:max(14px,calc(var(--u)*1.05));line-height:1.5;color:var(--t2);max-width:max(280px,calc(var(--u)*29))}
 
-.sys{position:relative;height:min(100%,calc(var(--u)*38));display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:calc(var(--u)*1.3)}
+.sys{position:relative;height:min(100%,calc(var(--u)*38));display:grid;grid-template-columns:minmax(0,1fr)}
 .world{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;min-height:0;padding:calc(var(--u)*1.9);border-radius:calc(var(--u)*2);overflow:hidden;isolation:isolate;text-align:left;cursor:pointer;
   background:linear-gradient(165deg,rgba(14,28,78,.72),rgba(4,9,28,.88));-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
   box-shadow:inset 0 0 0 1px var(--edge),inset 0 1px 0 rgba(255,255,255,.16),0 36px 80px -34px rgba(0,0,0,.75);
@@ -339,8 +339,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* HighBeam: pieza única con brillo propio, el producto flota sobre ella */
 .w-hb .surf::before{content:"";position:absolute;left:-30%;right:-30%;top:-10%;height:70%;background:radial-gradient(closest-side,rgba(63,124,255,.55),transparent);opacity:.55;transition:opacity .8s var(--e),transform 1.2s var(--eo)}
 .w-hb:hover .surf::before,.w-hb:focus-visible .surf::before{opacity:1;transform:scale(1.12)}
-.pic-hb{background:linear-gradient(160deg,rgba(100,160,255,.5),rgba(24,56,170,.36) 55%,rgba(8,16,64,.7))}
-.pic-hb img{object-fit:contain;object-position:50% 50%;opacity:1;padding:calc(var(--u)*.8);filter:drop-shadow(0 24px 40px rgba(0,0,0,.55))}
+.pic-hb{background:#03060f}
+.pic-hb img{object-fit:cover;object-position:50% 50%;opacity:1}
 
 /* ==================================================================
    05 · HIGHBEAM · el gran reveal
@@ -377,22 +377,32 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .s05 .eco .line>span{transform:translateY(145%)}
 .s05.st-1 .eco .line>span{transform:none;transition-delay:.45s}
 .s05.st-1 .eco p{opacity:1;transition-delay:.75s}
+/* El subtítulo cambia cuando se encienden los dos módulos nuevos */
+.eco .subs{display:grid}
+.eco .subs p{grid-area:1/1}
+.s05.st-3 .eco p.p1{opacity:0;transition-delay:0s}
+.eco p.p2{opacity:0!important;color:var(--sky);transition:opacity .8s var(--e)}
+.s05.st-3 .eco p.p2{opacity:1!important;transition-delay:.9s}
 /* Una sola pieza (un ecosistema) con cinco módulos: sin huecos, un único radio.
    Al pasar el ratón, el módulo se abre (acordeón) y enseña la pregunta de negocio. */
 .dimwrap{position:relative;align-self:center;margin:0 calc(var(--u)*4.4)}
-.dims{position:relative;display:flex;height:calc(var(--u)*24.5);border-radius:calc(var(--u)*2);overflow:hidden;isolation:isolate;background:rgba(6,12,36,.7);
-  box-shadow:0 36px 90px -30px rgba(0,0,0,.85),0 0 70px -22px rgba(63,124,255,.5)}
-.dims::after{content:"";position:absolute;inset:0;z-index:6;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(170,210,255,.34),inset 0 1px 0 rgba(255,255,255,.18);pointer-events:none}
+.dims{position:relative;display:flex;height:calc(var(--u)*24.5);border-radius:calc(var(--u)*2);overflow:hidden;isolation:isolate;background:rgba(6,12,36,0);
+  box-shadow:0 36px 90px -30px rgba(0,0,0,0),0 0 70px -22px rgba(63,124,255,0);transition:background .9s var(--e) .1s,box-shadow .9s var(--e) .1s}
+.dims::after{content:"";position:absolute;inset:0;z-index:6;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(170,210,255,.34),inset 0 1px 0 rgba(255,255,255,.18);pointer-events:none;opacity:0;transition:opacity .9s var(--e) .1s}
+/* la caja aparece cuando entran los módulos, no desde el principio */
+.s05.st-2 .dims{background:rgba(6,12,36,.7);box-shadow:0 36px 90px -30px rgba(0,0,0,.85),0 0 70px -22px rgba(63,124,255,.5)}
+.s05.st-2 .dims::after{opacity:1}
 .dim{position:relative;flex:1 1 0;min-width:0;overflow:hidden;clip-path:inset(100% 0 0 0);border-left:1px solid rgba(190,220,255,.2);
-  transition:clip-path .9s var(--eo),opacity .7s var(--e),flex-grow .8s var(--eo)}
+  transition:opacity .7s var(--e),flex-grow .8s var(--eo)}
 .dim:first-child{border-left:0}
-.dim>img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% 30%;opacity:1;transition:opacity .7s var(--e),transform 1.4s var(--eo)}
+/* las capturas traen un marco claro de ~10 px: se sobredimensionan un 4,4 % para que lleguen a todas las esquinas */
+.dim>img{position:absolute;inset:-2.2%;width:104.4%;height:104.4%;max-width:none;object-fit:cover;object-position:50% 30%;opacity:1;transition:opacity .7s var(--e),transform 1.4s var(--eo)}
 .dim::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(4,8,26,.92) 0%,rgba(4,8,26,.5) 34%,rgba(4,8,26,0) 66%);pointer-events:none}
 .dim::before{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;z-index:4;background:linear-gradient(90deg,var(--sky),rgba(139,205,255,0));transform:scaleX(0);transform-origin:0 50%;transition:transform .7s var(--eo)}
 .dim-empty{background:linear-gradient(165deg,rgba(34,56,130,.5),rgba(8,14,40,.85))}
 .dim .t{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:calc(var(--u)*1.5)}
 .dim .hbl{position:absolute;top:calc(var(--u)*1.4);left:calc(var(--u)*1.5);font-size:max(9px,calc(var(--u)*.56));font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:rgba(214,228,248,.8)}
-.dim h3{font-size:max(15px,calc(var(--u)*1.3));font-weight:500;letter-spacing:.08em;text-transform:uppercase;line-height:1.1;color:#fff;text-shadow:0 1px 16px rgba(3,6,15,.6);white-space:nowrap}
+.dim h3{font-size:max(15px,calc(var(--u)*1.3));font-weight:500;letter-spacing:.08em;text-transform:uppercase;line-height:1.1;color:#fff;text-shadow:0 1px 16px rgba(3,6,15,.6);white-space:normal;text-wrap:balance}
 .dim .desc{width:100%;max-width:calc(var(--u)*17);margin-top:calc(var(--u)*.7);min-height:5.4em;max-height:6.5em;overflow:hidden;font-size:max(11px,calc(var(--u)*.8));line-height:1.35;font-weight:600;color:rgba(238,244,255,.94);text-wrap:balance;text-shadow:0 1px 12px rgba(3,6,15,.6);
   transition:opacity .35s var(--e),max-height .5s var(--eo),min-height .5s var(--eo),margin .5s var(--eo)}
 .dim .more{width:100%;max-width:calc(var(--u)*24);max-height:0;overflow:hidden;opacity:0;transition:max-height .6s var(--eo),opacity .45s var(--e) .1s}
@@ -400,23 +410,76 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .dim .prd{margin-top:calc(var(--u)*.75);padding-top:calc(var(--u)*.65);border-top:1px solid rgba(214,228,248,.34);font-size:max(10px,calc(var(--u)*.7));font-weight:600;line-height:1.3;color:var(--sky)}
 .dim .prd span{color:rgba(214,228,248,.7);font-weight:500}
 /* abrir un módulo */
-.s05.st-3 .dim:hover{flex-grow:2.7}
-.s05.st-3 .dim.dim-empty:hover{flex-grow:1}
-.s05.st-3 .dim:hover>img{transform:scale(1.04)}
-.s05.st-3 .dim:hover::before{transform:scaleX(1)}
-.s05.st-3 .dim:hover .desc{max-height:0;min-height:0;margin-top:0;opacity:0}
-.s05.st-3 .dim:hover .more{max-height:14em;opacity:1}
-.s05.st-3 .dims:has(.dim:hover) .dim:not(:hover)>img{opacity:.55}
-.s05.st-3 .dims:has(.dim:hover) .dim:not(:hover) .desc{opacity:.25}
+.s05.st-4 .dim:hover{flex-grow:2.7}
+.s05.st-4 .dim:hover>img{transform:scale(1.04)}
+.s05.st-4 .dim:hover::before{transform:scaleX(1)}
+.s05.st-4 .dim:hover .desc{max-height:0;min-height:0;margin-top:0;opacity:0}
+.s05.st-4 .dim:hover .more{max-height:14em;opacity:1}
+.s05.st-4 .dims:has(.dim:hover) .dim:not(:hover)>img{opacity:.55}
+.s05.st-4 .dims:has(.dim:hover) .dim:not(:hover) .desc{opacity:.25}
 @media (hover:none){.s05 .dim .more{max-height:none;opacity:1;margin-top:calc(var(--u)*.6)}}
-.s05.st-2 .dim{clip-path:inset(0 0 0 0);transition-delay:var(--d),0s,0s}
-.s05.st-4 .dim:not(:first-child){opacity:.35}
-.s05.st-4 .dim:first-child::before{transform:scaleX(1)}
+.s05.st-2 .dim{clip-path:inset(0 0 0 0);animation:dimIn 1.4s var(--eo) var(--d) backwards}
+/* entrada fluida: cada módulo sube y se funde, la imagen se asienta desde un zoom suave y el texto llega después */
+.s05.st-2 .dim>img{animation:imgIn 2.2s var(--eo) var(--d) backwards}
+.s05.st-2 .dim .t{animation:txtIn 1.1s var(--eo) calc(var(--d) + .55s) backwards}
+@keyframes dimIn{from{opacity:0;transform:translateY(calc(var(--u)*2.6))}}
+@keyframes imgIn{from{transform:scale(1.18)}}
+@keyframes txtIn{from{opacity:0;transform:translateY(calc(var(--u)*1.1))}}
+/* Ampliación de la suite: Market y Used Vehicles entran después del núcleo original */
+.dim .hbl .tag{margin-left:0}
+.dim .tag{display:inline-block;margin-left:.9em;padding:.35em .7em;border-radius:9999px;font-size:.92em;letter-spacing:.2em;color:var(--ink);background:var(--sky);vertical-align:middle;opacity:0;transition:opacity .6s var(--e)}
+.s05.st-3 .dim .tag{opacity:1;transition-delay:1.3s}
+.dim .ray{position:absolute;inset:0;z-index:5;pointer-events:none;opacity:0;
+  background:linear-gradient(100deg,transparent 30%,rgba(139,205,255,.38) 48%,rgba(220,236,255,.55) 50%,rgba(139,205,255,.38) 52%,transparent 70%);background-size:300% 100%;background-position:100% 0}
+.s05.st-3 .dim .ray{animation:ray 1.6s var(--e) calc(var(--d) + .5s) both}
+@keyframes ray{0%{opacity:0;background-position:100% 0}20%{opacity:1}80%{opacity:1}100%{opacity:0;background-position:0 0}}
+.s05.st-3 .dim.nw::before{transform:scaleX(1);transition-delay:calc(var(--d) + .9s)}
+.s05.st-4 .dim.nw:hover{flex-grow:2.7}
+.s05.st-4 .dim.nw:not(:hover)::before{transform:scaleX(0);transition-delay:0s}
 .truth{text-align:center}
 .truth p{font-size:max(20px,calc(var(--u)*2.4));font-weight:400;letter-spacing:-.035em;color:var(--t1);text-wrap:balance}
 .truth p em{font-style:normal;color:var(--sky)}
 .s05 .truth .line>span{transform:translateY(145%)}
-.s05.st-3 .truth .line>span{transform:none;transition-delay:.9s}
+.s05.st-4 .truth .line>span{transform:none;transition-delay:.3s}
+
+/* ==================================================================
+   05b · HOW IT CONNECTS · un caso, seis módulos
+   ================================================================== */
+.cx{display:grid;grid-template-rows:auto minmax(0,1fr) auto;row-gap:calc(var(--u)*2)}
+.cx .head{display:flex;justify-content:space-between;align-items:flex-end;gap:calc(var(--u)*3)}
+.cx .q{font-size:max(30px,calc(var(--u)*3.23));font-weight:400;letter-spacing:-.045em;line-height:1.02;color:var(--t1);margin-top:calc(var(--u)*1.56)}
+.cx .lede{max-width:calc(var(--u)*30);font-size:max(14px,calc(var(--u)*1.05));line-height:1.5;color:var(--t2);text-align:right}
+.cx .lede .pill{margin-top:calc(var(--u)*.8)}
+.chain{position:relative;align-self:center;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:calc(var(--u)*1);row-gap:calc(var(--u)*1.1)}
+.gl{position:relative;display:flex;align-items:center;gap:calc(var(--u)*.8);font-size:max(10px,calc(var(--u)*.68));font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);transition:color .5s var(--e)}
+.gl::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--edge-hi),transparent)}
+.gl.g1{grid-column:1/4}.gl.g2{grid-column:4/5}.gl.g3{grid-column:5/6}
+.cx.st-1 .gl.g1,.cx.st-2 .gl.g2,.cx.st-3 .gl.g3{color:var(--sky)}
+/* el haz que recorre la cadena */
+.rail{grid-column:1/-1;position:relative;height:2px;background:rgba(210,228,255,.12);border-radius:2px}
+.rail i{position:absolute;inset:0;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--cobalt),var(--sky));box-shadow:0 0 18px rgba(139,205,255,.7);transition:transform 1.2s var(--eo)}
+.cx.st-1 .rail i{transform:scaleX(.6)} .cx.st-2 .rail i{transform:scaleX(.8)} .cx.st-3 .rail i{transform:scaleX(1)}
+.node{display:flex;flex-direction:column;min-height:calc(var(--u)*17);padding:calc(var(--u)*1.25);border-radius:max(14px,calc(var(--u)*1.04));
+  opacity:.22;transform:translateY(calc(var(--u)*.8));transition:opacity .7s var(--e) var(--d,0s),transform .9s var(--eo) var(--d,0s),box-shadow .6s var(--e)}
+.node .mn{font-size:max(10px,calc(var(--u)*.62));font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sky)}
+.node .mp{margin-top:4px;font-size:max(11px,calc(var(--u)*.72));font-weight:500;color:var(--t3)}
+.node h4{margin-top:calc(var(--u)*1.4);font-size:max(14px,calc(var(--u)*1.08));font-weight:500;letter-spacing:-.015em;line-height:1.3;color:var(--t1);text-wrap:pretty}
+.node .chip{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:.5em;padding:.45em .85em;border-radius:9999px;font-size:max(11px,calc(var(--u)*.72));font-weight:600;color:var(--t1);
+  background:rgba(139,205,255,.1);box-shadow:inset 0 0 0 1px rgba(139,205,255,.35)}
+.node .chip.flat{color:var(--t2);background:rgba(255,255,255,.04);box-shadow:inset 0 0 0 1px var(--edge)}
+.node .chip.hot{color:#ffcbbf;background:rgba(255,171,152,.12);box-shadow:inset 0 0 0 1px rgba(255,171,152,.5)}
+.cx.st-1 .node.n1,.cx.st-1 .node.n2,.cx.st-1 .node.n3,.cx.st-2 .node.n4,.cx.st-3 .node.n5{opacity:1;transform:none}
+.cx.st-2 .node.n1,.cx.st-2 .node.n2,.cx.st-2 .node.n3{opacity:.5}
+.cx.st-3 .node.n5{box-shadow:inset 0 0 0 1.5px rgba(139,205,255,.8),inset 0 1px 0 rgba(255,255,255,.3),0 0 70px rgba(63,124,255,.4)}
+.cx.st-3 .node.n4{opacity:.85} .cx.st-3 .node.n1,.cx.st-3 .node.n2,.cx.st-3 .node.n3{opacity:.5}
+.cx .node.n2{--d:.12s} .cx .node.n3{--d:.24s}
+.verdict{text-align:center}
+.verdict p{font-size:max(20px,calc(var(--u)*2.4));font-weight:400;letter-spacing:-.035em;color:var(--t1);text-wrap:balance}
+.verdict p em{font-style:normal;color:var(--sky)}
+.verdict small{display:block;margin-top:calc(var(--u)*.6);font-size:max(13px,calc(var(--u)*1.05));color:var(--t2);opacity:0;transition:opacity .8s var(--e)}
+.cx .verdict .line>span{transform:translateY(145%)}
+.cx.st-3 .verdict .line>span{transform:none;transition-delay:.9s}
+.cx.st-3 .verdict small{opacity:1;transition-delay:1.4s}
 
 /* ==================================================================
    06+ · SISTEMA DE PRODUCTO HIGHBEAM
@@ -428,14 +491,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .pid .name{font-size:max(15px,calc(var(--u)*.99));font-weight:500;letter-spacing:-.01em;color:var(--t1);line-height:1.3}
 .pid .name small{display:block;font-size:max(11px,calc(var(--u)*.68));font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--t3);margin-bottom:4px}
 .pcaps{list-style:none;margin-top:calc(var(--u)*2.08);display:grid;gap:max(8px,calc(var(--u)*.52))}
-.pcaps li{position:relative;display:grid;grid-template-columns:max(30px,calc(var(--u)*2.5)) 1fr;padding:max(12px,calc(var(--u)*.94)) max(14px,calc(var(--u)*1.15));border-radius:max(14px,calc(var(--u)*1.04));transition:opacity .45s var(--e),box-shadow .45s var(--e)}
+.pcaps li{position:relative;display:grid;grid-template-columns:max(30px,calc(var(--u)*2.5)) 1fr;padding:max(12px,calc(var(--u)*.94)) max(14px,calc(var(--u)*1.15));border-radius:max(14px,calc(var(--u)*1.04));transition:opacity .45s var(--e),box-shadow .45s var(--e),transform .4s var(--eo),background .4s var(--e)}
 .pcaps .n{font-size:max(12px,calc(var(--u)*.73));font-weight:600;color:var(--t3);padding-top:3px;transition:color .4s var(--e)}
 .pcaps h4{font-size:max(16px,calc(var(--u)*1.1));font-weight:500;letter-spacing:-.02em;color:var(--t1)}
 .pcaps p{margin-top:4px;font-size:max(13px,calc(var(--u)*.83));line-height:1.45;color:var(--t2)}
-.prod.st-1 .pcaps li,.prod.st-2 .pcaps li,.prod.st-3 .pcaps li{opacity:.32}
 .prod.st-1:not(.st-2) .pcaps li:nth-child(1),
 .prod.st-2:not(.st-3) .pcaps li:nth-child(2),
-.prod.st-3 .pcaps li:nth-child(3){opacity:1;box-shadow:inset 0 0 0 1.5px rgba(139,205,255,.7),inset 0 1px 0 rgba(255,255,255,.3),0 0 50px rgba(63,124,255,.25)}
+.prod.st-3 .pcaps li:nth-child(3){opacity:1}
+.prod.st-1:not(.st-2) .pcaps li:nth-child(1) h4,.prod.st-2:not(.st-3) .pcaps li:nth-child(2) h4,.prod.st-3 .pcaps li:nth-child(3) h4{color:var(--sky)}
 .prod.st-1:not(.st-2) .pcaps li:nth-child(1) .n,
 .prod.st-2:not(.st-3) .pcaps li:nth-child(2) .n,
 .prod.st-3 .pcaps li:nth-child(3) .n{color:var(--sky)}
@@ -454,18 +517,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hdev .tilt{position:relative;transition:transform .6s var(--eo);will-change:transform}
 .hdev img{width:100%;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7)) drop-shadow(0 0 40px rgba(63,124,255,.25));transition:filter .6s var(--e)}
 .hdev:hover img{filter:drop-shadow(0 40px 60px rgba(0,0,0,.7)) drop-shadow(0 0 60px rgba(63,124,255,.65))}
-.hdev .br{position:absolute;width:calc(var(--u)*1.7);height:calc(var(--u)*1.7);border:0 solid rgba(190,225,255,.7);transition:transform .55s var(--eo),border-color .4s var(--e),filter .4s var(--e)}
-.hdev .br.tl{left:calc(var(--u)*-1.7);top:calc(var(--u)*-1.7);border-width:1.5px 0 0 1.5px}
-.hdev .br.tr{right:calc(var(--u)*-1.7);top:calc(var(--u)*-1.7);border-width:1.5px 1.5px 0 0}
-.hdev .br.bl{left:calc(var(--u)*-1.7);bottom:calc(var(--u)*-1.7);border-width:0 0 1.5px 1.5px}
-.hdev .br.brr{right:calc(var(--u)*-1.7);bottom:calc(var(--u)*-1.7);border-width:0 1.5px 1.5px 0}
-.hdev:hover .br{border-color:var(--sky);filter:drop-shadow(0 0 8px rgba(139,205,255,.8))}
+.hdev .br{opacity:0;position:absolute;width:calc(var(--u)*1.2);height:calc(var(--u)*1.2);border:0 solid rgba(190,225,255,.7);transition:transform .55s var(--eo),border-color .4s var(--e),filter .4s var(--e),opacity .35s var(--e)}
+.hdev .br.tl{left:calc(var(--u)*-.5);top:calc(var(--u)*-.5);border-width:1.5px 0 0 1.5px}
+.hdev .br.tr{right:calc(var(--u)*-.5);top:calc(var(--u)*-.5);border-width:1.5px 1.5px 0 0}
+.hdev .br.bl{left:calc(var(--u)*-.5);bottom:calc(var(--u)*-.5);border-width:0 0 1.5px 1.5px}
+.hdev .br.brr{right:calc(var(--u)*-.5);bottom:calc(var(--u)*-.5);border-width:0 1.5px 1.5px 0}
+.hdev:hover .br{opacity:1;border-color:var(--sky);filter:drop-shadow(0 0 8px rgba(139,205,255,.8))}
 .hdev:hover .br.tl{transform:translate(calc(var(--u)*-.6),calc(var(--u)*-.6))} .hdev:hover .br.tr{transform:translate(calc(var(--u)*.6),calc(var(--u)*-.6))}
 .hdev:hover .br.bl{transform:translate(calc(var(--u)*-.6),calc(var(--u)*.6))}  .hdev:hover .br.brr{transform:translate(calc(var(--u)*.6),calc(var(--u)*.6))}
 .hdev .scan{position:absolute;inset:5% 9% 8%;border-radius:max(12px,calc(var(--u)*1.1));overflow:hidden;pointer-events:none;opacity:0;transition:opacity .4s var(--e)}
 .hdev .scan::after{content:"";position:absolute;left:0;right:0;top:-18%;height:18%;background:linear-gradient(to bottom,transparent,rgba(139,205,255,.5),transparent);border-bottom:1px solid rgba(190,230,255,.9);animation:scan 2.4s linear infinite}
 @keyframes scan{to{top:100%}}
-.hdev:hover .scan,.s06.st-3 .hdev .scan{opacity:1}
+.hdev:hover .scan,.prod.st-3 .hdev .scan{opacity:1}
 
 .hk{position:absolute;z-index:3;min-width:calc(var(--u)*9.4);display:flex;flex-direction:column;gap:calc(var(--u)*1.1);padding:calc(var(--u)*1) calc(var(--u)*1.2);border-radius:calc(var(--u)*1.1);
   background:rgba(8,16,48,.72);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:inset 0 0 0 1px var(--edge),inset 0 1px 0 rgba(255,255,255,.12),0 24px 50px -22px rgba(0,0,0,.8);
@@ -477,7 +540,102 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .hk.k2{right:1%;bottom:12%;--d:1.3s}
 .hk.k2 b{color:#ffab98}
 .hv:has(.hdev:hover) .hk{transform:translateY(-4px)}
-.s06.st-1:not(.st-2) .hk.k1,.s06.st-2:not(.st-3) .hk.k2{box-shadow:inset 0 0 0 1.5px rgba(139,205,255,.8),0 0 50px rgba(63,124,255,.35),0 24px 50px -22px rgba(0,0,0,.8)}
+.prod.st-1:not(.st-2) .hk.k1,.prod.st-2:not(.st-3) .hk.k2{box-shadow:inset 0 0 0 1.5px rgba(139,205,255,.8),0 0 50px rgba(63,124,255,.35),0 24px 50px -22px rgba(0,0,0,.8)}
+.hk.k2.ok b{color:var(--sky)} .hk b.o{color:#ffab98}
+.pid .acr.sm{font-size:max(36px,calc(var(--u)*3.9))}
+
+/* Tablet construida en HTML (Market · Used Vehicles): misma gramática que el mock-up del DCI */
+.tab{position:relative;aspect-ratio:3/3.7;padding:calc(var(--u)*.75);border-radius:calc(var(--u)*1.7);background:linear-gradient(150deg,#1b1b22,#050507 60%);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 40px 60px -20px rgba(0,0,0,.75),0 0 40px rgba(63,124,255,.25);transition:box-shadow .6s var(--e)}
+.hdev:hover .tab{box-shadow:inset 0 0 0 1px rgba(255,255,255,.2),0 40px 60px -20px rgba(0,0,0,.75),0 0 60px rgba(63,124,255,.6)}
+.scr{position:relative;height:100%;border-radius:calc(var(--u)*1.05);overflow:hidden;display:flex;flex-direction:column;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.05);
+  background:linear-gradient(135deg,#3b3858 0%,#2c2947 47%,#1f1c37 53%,#16142a 100%);font-size:calc(var(--u)*.5);color:rgba(220,226,245,.75)}
+.scr .sh{display:flex;justify-content:space-between;align-items:flex-start}
+.scr .lb{font-size:calc(var(--u)*.42);font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(200,206,235,.6)}
+.scr .big{margin-top:calc(var(--u)*.2);font-size:calc(var(--u)*1.35);font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1}
+.scr .sm{font-size:calc(var(--u)*.45);color:#ff9f80;font-weight:600;margin-top:calc(var(--u)*.15)}
+.scr .sm.c{color:var(--sky)}
+.scr .tl{display:flex;gap:calc(var(--u)*.4)}
+.scr .tl span{padding:calc(var(--u)*.18) calc(var(--u)*.45);border-radius:9999px;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);font-size:calc(var(--u)*.42);font-weight:600}
+.scr .tl span.on{background:rgba(139,205,255,.18);color:#fff}
+.scr .pn{border-radius:calc(var(--u)*.55);background:rgba(10,8,26,.38);box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);padding:calc(var(--u)*.7)}
+.scr .pn.grow{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+.scr svg{display:block;width:100%;flex:1;min-height:0;margin-top:calc(var(--u)*.4)}
+.scr .lg{display:flex;gap:calc(var(--u)*.8);margin-top:calc(var(--u)*.3);font-size:calc(var(--u)*.42)}
+.scr .lg i{display:inline-block;width:calc(var(--u)*.6);height:2px;margin-right:.4em;vertical-align:middle;background:var(--sky)}
+.scr .lg i.o{background:#ff9f80}
+.scr table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.scr th{font-size:calc(var(--u)*.4);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(200,206,235,.5);text-align:right;padding-bottom:calc(var(--u)*.3)}
+.scr th:first-child,.scr td:first-child{text-align:left}
+.scr td{padding:calc(var(--u)*.28) 0;border-top:1px solid rgba(255,255,255,.07);text-align:right;color:rgba(230,234,250,.85)}
+.scr td b{color:#fff;font-weight:700}
+.scr tr.me td{color:var(--sky)}
+.scr .bars{display:grid;gap:calc(var(--u)*.45);margin-top:calc(var(--u)*.5)}
+.scr .br2{display:grid;grid-template-columns:calc(var(--u)*3) 1fr calc(var(--u)*2.4);align-items:center;gap:calc(var(--u)*.5)}
+.scr .br2 em{font-style:normal;font-weight:600;color:rgba(230,234,250,.85)}
+.scr .br2 i{display:block;height:calc(var(--u)*.6);border-radius:9999px;background:linear-gradient(90deg,rgba(139,128,230,.9),rgba(139,128,230,.35));transform-origin:0 50%;transform:scaleX(0);transition:transform 1s var(--eo) var(--d,1s)}
+.scene.active .scr .br2 i{transform:scaleX(var(--w))}
+.scr .br2.rec i{background:linear-gradient(90deg,var(--sky),rgba(139,205,255,.4))}
+.scr .br2.slow i{background:linear-gradient(90deg,#ff9f80,rgba(255,159,128,.35))}
+.scr .br2 span{text-align:right;font-weight:600}
+.scr .act{display:grid;gap:calc(var(--u)*.3)}
+.scr .act div{display:flex;justify-content:space-between;align-items:center;padding:calc(var(--u)*.3) 0;border-top:1px solid rgba(255,255,255,.07)}
+.scr .act b{font-size:calc(var(--u)*.4);letter-spacing:.12em;padding:calc(var(--u)*.15) calc(var(--u)*.45);border-radius:9999px}
+.scr .act b.k{color:#bfe3ff;background:rgba(139,205,255,.15)} .scr .act b.r{color:#ffc6b5;background:rgba(255,159,128,.16)} .scr .act b.x{color:#d9d2ff;background:rgba(139,128,230,.22)}
+.scr .draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s var(--e) 1s}
+.scene.active .scr .draw{stroke-dashoffset:0}
+.scr .kv{flex:1;display:grid;grid-template-columns:repeat(4,1fr);align-items:center;margin-top:calc(var(--u)*.4)}
+.scr .kv div{display:flex;flex-direction:column;gap:calc(var(--u)*.2);padding-left:calc(var(--u)*.5);border-left:1px solid rgba(255,255,255,.08)}
+.scr .kv div:first-child{border-left:0;padding-left:0}
+.scr .kv em{font-style:normal;font-size:calc(var(--u)*.42);color:rgba(200,206,235,.6)}
+.scr .kv b{font-size:calc(var(--u)*.95);font-weight:700;color:#fff;letter-spacing:-.02em}
+.scr .kv b.o{color:#ff9f80}
+/* Recorrido del comprador bajo las tarjetas: fija el orden 01→06 que siguen las escenas de producto */
+.journey{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:calc(var(--u)*1.2);padding-top:calc(var(--u)*.9);opacity:0;transform:translateY(8px);transition:opacity .7s var(--e),transform .8s var(--eo)}
+.journey::before{content:"";position:absolute;left:0;right:calc(var(--u)*.4);top:0;height:1px;background:linear-gradient(90deg,rgba(139,205,255,.15),var(--sky))}
+.journey::after{content:"";position:absolute;right:0;top:calc(var(--u)*-.35);width:calc(var(--u)*.7);height:calc(var(--u)*.7);border-top:1px solid var(--sky);border-right:1px solid var(--sky);transform:rotate(45deg)}
+.journey span{padding-left:0;text-align:center;text-indent:.18em;white-space:nowrap;font-size:max(10px,calc(var(--u)*.66));font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t2)}
+.journey b{margin-right:.8em;color:var(--sky);font-weight:600}
+/* un punto azul sobre la línea, en el centro de cada módulo: marca de qué momento del recorrido es cada uno */
+.journey span{position:relative}
+.journey span::before{content:"";position:absolute;left:50%;top:calc(var(--u)*-.9);width:calc(var(--u)*.7);height:calc(var(--u)*.7);margin:calc(var(--u)*-.35) 0 0 calc(var(--u)*-.35);border-radius:50%;
+  background:var(--sky);box-shadow:0 0 0 calc(var(--u)*.3) rgba(139,205,255,.18),0 0 calc(var(--u)*1.2) rgba(139,205,255,.85);transform:scale(0);transition:transform .6s var(--eo)}
+.s05.st-4 .journey span::before{transform:scale(1)}
+.s05.st-4 .journey span:nth-child(1)::before{transition-delay:.7s}.s05.st-4 .journey span:nth-child(2)::before{transition-delay:.78s}
+.s05.st-4 .journey span:nth-child(3)::before{transition-delay:.86s}.s05.st-4 .journey span:nth-child(4)::before{transition-delay:.94s}
+.s05.st-4 .journey span:nth-child(5)::before{transition-delay:1.02s}.s05.st-4 .journey span:nth-child(6)::before{transition-delay:1.1s}
+.s05.st-4 .journey{opacity:1;transform:none;transition-delay:.6s}
+.s05.st-4 .dimwrap:has(.dim:hover) .journey{opacity:0;transition-delay:0s}
+.crumb.hb{gap:calc(var(--u)*.9);align-items:baseline}
+.crumb.hb .hbw{font-size:max(22px,calc(var(--u)*1.9));font-weight:500;letter-spacing:-.05em;line-height:1.1;color:var(--t1);padding-bottom:.12em}
+.crumb.hb i{font-size:max(16px,calc(var(--u)*1.3));opacity:.4}
+.crumb.hb b{font-size:max(12px,calc(var(--u)*.85));font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sky)}
+.crumb .ix{margin-left:calc(var(--u)*1.2);padding-left:calc(var(--u)*1.2);border-left:1px solid var(--edge-hi);font-size:.86em;letter-spacing:.06em;color:var(--t3)}
+.crumb .ix b{color:var(--sky);font-weight:600}
+.node .nn{margin-right:.7em;color:var(--t3)}
+/* Model Diagnosis: promesa vs percepción */
+.scr .lgx{float:right;letter-spacing:.06em;text-transform:none;font-weight:500}
+.scr .lgx i{display:inline-block;width:calc(var(--u)*.55);height:calc(var(--u)*.3);margin:0 .35em 0 .6em;border-radius:2px;vertical-align:middle}
+.scr i.pr{box-shadow:inset 0 0 0 1px rgba(220,226,245,.55);background:transparent}
+.scr i.pe{background:var(--sky)} .scr i.pe.o{background:#ff9f80}
+.scr .gaps{display:grid;gap:calc(var(--u)*.42);margin-top:calc(var(--u)*.5)}
+.scr .gp{display:grid;grid-template-columns:calc(var(--u)*4.4) 1fr calc(var(--u)*1.4);align-items:center;gap:calc(var(--u)*.5)}
+.scr .gp em{font-style:normal;font-weight:600;color:rgba(230,234,250,.85)}
+.scr .gp span{position:relative;height:calc(var(--u)*.6)}
+.scr .gp i{position:absolute;left:0;top:0;bottom:0;border-radius:9999px;transform-origin:0 50%;transform:scaleX(0);transition:transform 1s var(--eo) var(--d,1s)}
+.scr .gp i.pr{width:calc(var(--p)*100%)} .scr .gp i.pe{top:22%;bottom:22%;width:calc(var(--r)*100%);opacity:.9}
+.scene.active .scr .gp i{transform:scaleX(1)}
+.scr .gp b{text-align:right;font-weight:700;color:var(--sky)} .scr .gp b.o{color:#ff9f80}
+.scr .vq{margin:calc(var(--u)*.5) 0 calc(var(--u)*.4);font-size:calc(var(--u)*.62);line-height:1.4;color:#fff;font-style:italic}
+/* Retail: tú vs. el vecino */
+.scr .vs{display:flex;align-items:center;justify-content:space-around;margin:calc(var(--u)*.5) 0 calc(var(--u)*.6)}
+.scr .vs div{display:flex;flex-direction:column;align-items:center;gap:calc(var(--u)*.2)}
+.scr .vs em{font-style:normal;font-size:calc(var(--u)*.42);color:rgba(200,206,235,.6)}
+.scr .vs b{font-size:calc(var(--u)*1.6);font-weight:700;color:var(--sky);letter-spacing:-.03em} .scr .vs b.o{color:#ff9f80}
+.scr .vs>span{font-size:calc(var(--u)*.5);color:rgba(200,206,235,.5)}
+.scr tr.lo td{color:#ff9f80}
+.scr td:last-child{font-size:.85em}
+.tab+.scan,.tilt>.scan.t2{inset:calc(var(--u)*.75);border-radius:calc(var(--u)*1.05)}
 .pcap-note{display:flex;justify-content:center;align-items:center;gap:calc(var(--u)*1);margin-top:calc(var(--u)*1.4)}
 
 /* ==================================================================
@@ -485,12 +643,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    ================================================================== */
 .nav{position:absolute;left:var(--px);right:var(--px);bottom:max(var(--nav-b),env(safe-area-inset-bottom));height:var(--nav-h);z-index:50;display:flex;align-items:center;gap:max(8px,calc(var(--u)*.52))}
 .nav .chap{display:flex;align-items:center;gap:max(5px,calc(var(--u)*.3))}
-.nav .sep{width:1px;height:max(16px,calc(var(--u)*1.1));background:var(--edge-hi);flex:none;margin:0 max(4px,calc(var(--u)*.3));opacity:.7}
-.nav .sub{opacity:0;pointer-events:none;transition:opacity .4s var(--e)}
-.nav.hb .sub,.nav.hb .sep{opacity:1}
-.nav.hb .sub{pointer-events:auto}
-.nav:not(.hb) .sep{opacity:0}
-@media (max-width:1560px){.nav.hb .keys{display:none}}
 .nav .right{margin-left:auto;display:flex;align-items:center;gap:max(8px,calc(var(--u)*.52));flex:none}
 
 /* Logo: vuelve al inicio */
@@ -525,8 +677,41 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .nav .chap button:not(:disabled):active,.nav .arrow:active{transform:translateY(0) scale(.95);background:rgba(139,205,255,.26);transition-duration:.08s}
 .nav button:focus-visible{outline:2px solid var(--sky);outline-offset:3px}
 /* activo */
-.nav .chap button.on{background:var(--t1);color:var(--ink);font-weight:600;box-shadow:0 8px 24px -10px rgba(220,236,255,.55)}
-@media (hover:hover){.nav .chap button.on:hover{background:var(--ice);transform:translateY(-2px)}}
+.nav .chap button.on{background:rgba(139,205,255,.12);color:var(--t1);box-shadow:inset 0 0 0 1px rgba(139,205,255,.6)}
+/* Solutions: la cápsula se abre y muestra HighBeam (hover, foco o cuando ya estamos dentro) */
+.nav .solx{position:relative;display:inline-flex;align-items:center;height:max(32px,calc(var(--u)*2));border-radius:9999px;
+  background:rgba(255,255,255,.055);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--edge-hi),inset 0 1px 0 rgba(255,255,255,.14);transition:box-shadow .3s var(--e),background .3s var(--e)}
+.nav .solx button{background:none!important;box-shadow:none!important;backdrop-filter:none;-webkit-backdrop-filter:none}
+.nav .solx .hbx{max-width:0;padding-left:0;padding-right:0;opacity:0;gap:.5em;color:var(--sky);transition:max-width .45s var(--eo),padding .45s var(--eo),opacity .3s var(--e),color .25s var(--e)}
+.nav .solx .hbx svg{width:1.05em;height:1.05em;flex:none}
+.nav .solx .hbx::after{content:"";position:absolute;left:0;top:28%;bottom:28%;width:1px;background:var(--edge-hi)}
+.nav .solx:hover .hbx,.nav .solx:focus-within .hbx,.nav .solx.open .hbx{max-width:12em;padding-left:max(11px,calc(var(--u)*.78));padding-right:max(11px,calc(var(--u)*.78));opacity:1}
+.nav .solx:hover,.nav .solx:focus-within{background:rgba(139,205,255,.1)}
+.nav .solx.on{background:rgba(139,205,255,.12);box-shadow:inset 0 0 0 1px rgba(139,205,255,.6)}
+.nav .solx .on{color:var(--t1)}
+.nav .solx .hbx:hover{color:var(--t1)}
+/* Navegación de HighBeam: arriba a la izquierda, separada de la de Astara */
+.hbnav{position:absolute;z-index:50;left:var(--px);top:max(16px,calc(var(--u)*1.25));display:flex;align-items:center;gap:calc(var(--u)*1.6);
+  opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .5s var(--e),transform .6s var(--eo)}
+#stage.hbn .hbnav{opacity:1;pointer-events:auto;transform:none}
+.hbnav button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.hbnav .hbl{font-size:max(18px,calc(var(--u)*1.25));font-weight:500;letter-spacing:-.05em;line-height:1;color:var(--t1);padding:0 calc(var(--u)*1.6) .08em 0;border-right:1px solid var(--edge-hi);transition:color .25s var(--e),opacity .4s var(--e)}
+.hbnav .hbl:hover{color:var(--sky)}
+/* en el overview la propia suite hace de navegación (cada módulo lleva a su escena) */
+#stage.hbo .hbnav{opacity:0;pointer-events:none}
+.s05 .dim[data-go]{cursor:pointer}
+.s05 .dim[data-go]:focus-visible{outline:1px solid var(--sky);outline-offset:-3px}
+.hbnav .hbi{display:flex;align-items:center;gap:calc(var(--u)*1.5)}
+.hbnav .hbi button{position:relative;padding:.45em 0;font-size:max(10px,calc(var(--u)*.64));font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(214,228,248,.62);transition:color .25s var(--e)}
+.hbnav .hbi button::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;border-radius:2px;background:var(--sky);transform:scaleX(0);transform-origin:0 50%;transition:transform .45s var(--eo)}
+.hbnav .hbi button:hover{color:var(--t1)}
+.hbnav .hbi button.on{color:var(--sky)}
+.hbnav .hbi button.on::after{transform:none}
+.hbnav .hbsep{width:1px;height:max(12px,calc(var(--u)*.8));background:var(--edge-hi)}
+.hbnav .hbi button.all{color:rgba(139,205,255,.75)}
+.hbnav .hbi button.all.on{color:var(--sky)}
+.hbnav button:focus-visible{outline:1px solid var(--sky);outline-offset:4px;border-radius:4px}
+.scene[data-hb]{padding-top:calc(var(--py) + var(--u)*1.2)}
 .nav .chap button:disabled{opacity:.38;cursor:default;box-shadow:inset 0 0 0 1px var(--edge)}
 .nav .chap button:disabled::after{content:none}
 .nav .arrow{width:max(32px,calc(var(--u)*2));padding:0}
@@ -547,7 +732,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
 /* Navegación compacta: pantallas estrechas o verticales */
 @media (max-width:1100px),(max-aspect-ratio:5/4){
-  .nav .chap,.nav .sep,.nav .keys{display:none}
+  .nav .chap,.nav .keys{display:none}
+  .hbnav .hbi{gap:calc(var(--u)*1.2)}
+}
+@media (max-width:1100px),(max-aspect-ratio:5/4){
   .nav .cur{display:inline-flex}
 }
 @media (pointer:coarse){ .nav .arrow{width:44px;height:44px} .nav .chap button,.nav .cur{height:40px} }
@@ -588,6 +776,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .s04 .mega{font-size:max(34px,calc(var(--u)*5.6))}
   .sys{height:auto;grid-template-columns:minmax(0,1fr);row-gap:calc(var(--u)*1.6)}
   .world{min-height:calc(var(--u)*34)}
+  .s04 .w-hb{height:auto;min-height:calc(var(--u)*16)}
 
   .s05{--wm-s:.5}
   .s05-flow{grid-template-rows:var(--wm-h,80px) auto minmax(min-content,1fr) auto}
@@ -596,13 +785,194 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .dim{flex:none;min-height:max(220px,calc(var(--u)*24));border-left:0;border-top:1px solid rgba(190,220,255,.2)}
   .dim:last-child:nth-child(odd){grid-column:1/-1}
 
+  .cx{display:flex;flex-direction:column;gap:calc(var(--u)*2.4)}
+  .cx .head{flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.4)} .cx .lede{text-align:left;max-width:none}
+  .chain{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:calc(var(--u)*2)}
+  .gl,.rail{display:none}
+  .node{min-height:max(170px,calc(var(--u)*18))}
+
   .prod{display:flex;flex-direction:column;align-items:stretch}
   .prod .left{display:contents}
-  .prod .crumb{order:1} .prod .q{order:2} .pid{order:3} .parea{order:4} .pcaps{order:5}
+  .prod .eyebrow{order:1} .prod .q{order:2} .pid{order:3} .parea{order:4} .pcaps{order:5}
+  .prod .pcaps li{padding:calc(var(--u)*1.2) 0;border-top:1px solid var(--edge)}
+  .prod .demo{align-self:flex-end;margin-top:calc(var(--u)*1.6)}
+  .stg2{display:grid;grid-template-columns:minmax(0,1fr);row-gap:calc(var(--u)*1.6)}
+  .stg2 .hv{height:auto}
+  .stg2 .hdev,.stg2 .device{position:relative;left:auto;top:auto;width:min(100%,calc(var(--u)*44));margin:0 auto;transform:none}
+  .stg2 .tilt>img,.stg2 img.mock{width:100%!important;height:auto!important}
+  .stg2 .hero{display:flex;flex-direction:column;align-items:center;row-gap:calc(var(--u)*1.6)}
+  .stg2 .ph{display:none}
+  .stg2 .shots:not(:has(.shot:not(.ph))){display:none}
+  .stg2 .shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.2)}
+  .stg2 .shot{margin:0;display:grid;place-items:center;padding:calc(var(--u)*.8);border-radius:calc(var(--u)*1.1);overflow:hidden;background:linear-gradient(160deg,rgba(14,28,78,.5),rgba(4,9,28,.6));box-shadow:inset 0 0 0 1px rgba(170,205,255,.16)}
+  .stg2 .shot.ref img{display:block;max-width:100%;height:auto}
+  .scene.active .stg2 .device,.scene.active .stg2 .hdev{transform:none}
+  .prod .pcaps li{display:grid;grid-template-columns:auto 1fr;column-gap:calc(var(--u)*1);padding:calc(var(--u)*1.1) calc(var(--u)*1.3);margin-top:calc(var(--u)*.8);border-top:0}
   .parea{margin:calc(var(--u)*3) 0 0}
   .hv{height:calc(var(--u)*38)}
   .hdev{width:calc(var(--u)*26)}
   .orb.o1{width:calc(var(--u)*44)} .orb.o2{width:calc(var(--u)*35)}
+}
+
+
+
+/* Strategy · el dashboard real con foco sobre cada punto; la tablet señala "vs. competidores" */
+.sw2{position:relative;width:100%}
+.screen{position:relative;border-radius:calc(var(--u)*1.56);padding:calc(var(--u)*.6);clip-path:inset(0 0 0 100% round calc(var(--u)*1.56));transition:clip-path 1.1s var(--eo) .2s}
+.scene.active .screen{clip-path:inset(0 0 0 0 round calc(var(--u)*1.56))}
+.screen .frame{position:relative;border-radius:calc(var(--u)*1);overflow:hidden}
+.screen img{width:100%;height:auto}
+.spot{position:absolute;border-radius:calc(var(--u)*.7);opacity:0;box-shadow:0 0 0 3000px rgba(2,5,14,.66),inset 0 0 0 2px var(--sky),0 0 50px rgba(139,205,255,.4);transition:opacity .45s var(--e)}
+.callout{position:absolute;display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:max(12px,calc(var(--u)*.78));font-weight:500;color:var(--t1);
+  padding:max(5px,calc(var(--u)*.36)) max(13px,calc(var(--u)*.9));border-radius:9999px;background:rgba(3,6,15,.86);box-shadow:inset 0 0 0 1px var(--edge-hi);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.spot .callout{top:calc(100% + calc(var(--u)*.6));left:calc(var(--u)*.6)}
+.dimall{position:absolute;inset:0;background:rgba(2,5,14,.66);opacity:0;transition:opacity .45s var(--e)}
+.device{position:absolute;left:3%;top:50%;width:26%;filter:drop-shadow(0 40px 60px rgba(0,0,0,.7));opacity:0;transform:translateY(40px);transition:opacity .7s var(--eo),transform .9s var(--eo)}
+.scene.active .device{opacity:1;transform:translateY(-50%);transition-delay:.7s}
+.device .ring{position:absolute;inset:6% 9% 7%;border-radius:calc(var(--u)*1.25);opacity:0;box-shadow:inset 0 0 0 2px var(--sky),0 0 60px rgba(139,205,255,.5);transition:opacity .45s var(--e)}
+.device .ring .callout{bottom:calc(100% + calc(var(--u)*.6));left:-2px}
+.s06.st-1:not(.st-2) .spot.k1{opacity:1}
+.s06.st-2:not(.st-3) .dimall{opacity:1}
+.s06.st-2:not(.st-3) .device .ring{opacity:1}
+.s06.st-3 .spot.k3{opacity:1}
+
+/* Strategy · mock-up interactivo: esquinas que se abren, brillo, línea de escaneo e inclinación con el puntero */
+.device .tilt{position:relative;transition:transform .6s var(--eo);will-change:transform}
+.device .tilt>img{transition:filter .6s var(--e)}
+.device:hover .tilt>img{filter:drop-shadow(0 0 50px rgba(63,124,255,.65))}
+.device .br{opacity:0;position:absolute;z-index:4;width:calc(var(--u)*1.2);height:calc(var(--u)*1.2);border:0 solid rgba(190,225,255,.7);pointer-events:none;transition:transform .55s var(--eo),border-color .4s var(--e),filter .4s var(--e),opacity .35s var(--e)}
+.device .br.tl{left:calc(var(--u)*-.5);top:calc(var(--u)*-.5);border-width:1.5px 0 0 1.5px}
+.device .br.tr{right:calc(var(--u)*-.5);top:calc(var(--u)*-.5);border-width:1.5px 1.5px 0 0}
+.device .br.bl{left:calc(var(--u)*-.5);bottom:calc(var(--u)*-.5);border-width:0 0 1.5px 1.5px}
+.device .br.brr{right:calc(var(--u)*-.5);bottom:calc(var(--u)*-.5);border-width:0 1.5px 1.5px 0}
+.device:hover .br,.s06.st-2:not(.st-3) .device .br{opacity:1;border-color:var(--sky);filter:drop-shadow(0 0 8px rgba(139,205,255,.8))}
+.device:hover .br.tl{transform:translate(calc(var(--u)*-.6),calc(var(--u)*-.6))} .device:hover .br.tr{transform:translate(calc(var(--u)*.6),calc(var(--u)*-.6))}
+.device:hover .br.bl{transform:translate(calc(var(--u)*-.6),calc(var(--u)*.6))}  .device:hover .br.brr{transform:translate(calc(var(--u)*.6),calc(var(--u)*.6))}
+.device .scan{position:absolute;inset:5% 9% 8%;border-radius:calc(var(--u)*1.1);overflow:hidden;pointer-events:none;opacity:0;transition:opacity .4s var(--e)}
+.device .scan::after{content:"";position:absolute;left:0;right:0;top:-18%;height:18%;background:linear-gradient(to bottom,transparent,rgba(139,205,255,.5),transparent);border-bottom:1px solid rgba(190,230,255,.9);animation:scan 2.4s linear infinite}
+.device:hover .scan,.s06.st-2:not(.st-3) .device .scan{opacity:1}
+/* ---- Strategy · composición con portada propia, capacidades en fila y botón de demo ---- */
+.sxbg{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity 1.2s var(--e) .1s;
+  background:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.35) 45%,rgba(3,6,15,0) 75%),linear-gradient(0deg,rgba(3,6,15,.55),rgba(3,6,15,0) 40%),url(assets/highbeam/strategy-cover.jpg) center/cover no-repeat}
+.sx.active .sxbg{opacity:1}
+.demo{position:relative;display:inline-flex;align-items:center;gap:calc(var(--u)*.7);justify-self:start;align-self:start;margin-top:calc(var(--u)*1.6);height:max(34px,calc(var(--u)*2.2));padding:0 calc(var(--u)*1.1) 0 calc(var(--u)*1.3);border-radius:9999px;overflow:hidden;isolation:isolate;
+  font-size:max(12px,calc(var(--u)*.8));font-weight:500;letter-spacing:.02em;color:var(--t1);cursor:pointer;text-decoration:none;white-space:nowrap;
+  background:rgba(255,255,255,.055);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--edge-hi),inset 0 1px 0 rgba(255,255,255,.14);
+  transition:background .25s var(--e),box-shadow .25s var(--e),transform .35s var(--eo)}
+.demo .play{display:grid;place-items:center;width:calc(var(--u)*1.5);height:calc(var(--u)*1.5);color:var(--sky);transition:transform .35s var(--eo)}
+.demo .play svg{width:100%;height:100%}
+.demo:hover{transform:translateY(-2px);background:rgba(139,205,255,.14);box-shadow:inset 0 0 0 1px rgba(139,205,255,.7),inset 0 1px 0 rgba(255,255,255,.25),0 12px 30px -12px rgba(63,124,255,.55)}
+.demo:hover .play{transform:translateX(3px)}
+.demo:active{transform:translateY(0) scale(.96);background:rgba(139,205,255,.26);transition-duration:.08s}
+/* Solutions: puntos de capacidad, colmena de propuestas y acceso compacto a HighBeam */
+.spts{list-style:none;margin-top:calc(var(--u)*2);display:grid;row-gap:calc(var(--u)*1.05);max-width:calc(var(--u)*30)}
+.spts li{position:relative;padding-left:calc(var(--u)*1.5)}
+.spts li::before{content:"";position:absolute;left:0;top:calc(var(--u)*.3);width:calc(var(--u)*.5);height:calc(var(--u)*.5);background:var(--sky);box-shadow:0 0 10px rgba(139,205,255,.6)}
+.spts b{display:block;font-size:max(11px,calc(var(--u)*.74));font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t1)}
+.spts span{display:block;margin-top:calc(var(--u)*.25);font-size:max(12px,calc(var(--u)*.78));line-height:1.45;color:var(--t2)}
+.s04 .sys{height:auto;display:flex;flex-direction:column;row-gap:calc(var(--u)*1.8)}
+.hexes{display:block;width:86%;align-self:center;height:auto;overflow:visible;-webkit-mask-image:radial-gradient(ellipse 62% 75% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 62% 75% at 50% 50%,#000 55%,transparent 100%)}
+.hexes .hx{fill:none;stroke:rgba(139,205,255,.42);stroke-width:3;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s var(--eo) var(--d)}
+.s04.active .hexes .hx{stroke-dashoffset:0}
+.hexes .hf{opacity:0;transform-box:fill-box;transform-origin:50% 50%;transform:scale(.86);transition:opacity .8s var(--e) var(--d),transform 1s var(--eo) var(--d)}
+.s04.active .hexes .hf{opacity:1;transform:none}
+.hexes .hf path{fill:var(--sky);filter:drop-shadow(0 0 24px rgba(139,205,255,.55))}
+.hexes .hf text{font-family:var(--f);font-size:31px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;fill:#0b1a3a;text-anchor:middle}
+/* tarjeta de HighBeam más pequeña: banda horizontal con la imagen de fondo */
+.s04 .w-hb{width:100%;align-self:center;height:calc(var(--u)*15.5);flex:none;cursor:pointer;justify-content:center;padding:calc(var(--u)*1.4) calc(var(--u)*2)}
+.s04 .w-hb .pic{inset:0;border-radius:inherit}
+.s04 .w-hb .pic::after{background:linear-gradient(90deg,rgba(3,8,26,.9) 0%,rgba(3,8,26,.55) 50%,rgba(3,8,26,0) 85%)}
+.s04 .w-hb .pic img{object-position:30% 50%}
+.s04 .w-hb::after{display:none}
+.s04 .w-hb .wt{font-size:max(26px,calc(var(--u)*3))}
+.s04 .w-hb .wd{min-height:0;max-width:calc(var(--u)*26);font-size:max(13px,calc(var(--u)*1))}
+.s04 .w-hb .wx{margin-top:calc(var(--u)*1.1);padding:calc(var(--u)*.55) calc(var(--u)*1.3);border-radius:9999px;opacity:1;color:var(--t1);font-size:max(11px,calc(var(--u)*.74));letter-spacing:.16em;
+  background:rgba(139,205,255,.14);box-shadow:inset 0 0 0 1px rgba(139,205,255,.6),0 0 28px -6px rgba(63,124,255,.65);transition:background .3s var(--e),box-shadow .3s var(--e),transform .35s var(--eo)}
+.s04 .w-hb:hover .wx,.s04 .w-hb:focus-visible .wx{background:rgba(139,205,255,.3);box-shadow:inset 0 0 0 1px rgba(190,225,255,.9),0 0 38px -4px rgba(63,124,255,.9)}
+.s04 .w-hb .wx::after{content:"";width:6px;height:6px;margin-left:.4em;border-radius:50%;background:var(--sky);box-shadow:0 0 0 0 rgba(139,205,255,.7);animation:wxp 2.2s var(--e) infinite}
+@keyframes wxp{70%{box-shadow:0 0 0 9px rgba(139,205,255,0)}100%{box-shadow:0 0 0 0 rgba(139,205,255,0)}}
+/* fondo de las escenas de producto: más tenue para que la interfaz destaque */
+#stage.hbp .bg.b5{opacity:.45}
+#stage.hbr .bg.b5{opacity:.3}
+.hdev img,.stg2 .device img{filter:contrast(1.06) saturate(1.05)}
+/* Plantilla de producto HighBeam · layout ejecutivo compacto (lienzo 1920×1080: cabecera 70px, pie 80px, contenido Y≈90–900) */
+.prod .pcaps li{background:rgba(3,7,20,.42);box-shadow:inset 0 0 0 1px rgba(170,205,255,.14),inset 0 1px 0 rgba(255,255,255,.05);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:calc(var(--u)*.9);transition:box-shadow .4s var(--e),background .4s var(--e)}
+.prod .pcaps li:hover{box-shadow:inset 0 0 0 1px rgba(139,205,255,.4),inset 0 1px 0 rgba(255,255,255,.08)}
+.prod.st-1:not(.st-2) .pcaps li:nth-child(1),.prod.st-2:not(.st-3) .pcaps li:nth-child(2),.prod.st-3 .pcaps li:nth-child(3){background:rgba(10,24,64,.5);box-shadow:inset 0 0 0 1px rgba(139,205,255,.5),inset 0 1px 0 rgba(255,255,255,.08)}
+.prod .left .eyebrow{display:flex;align-items:center;font-size:max(11px,calc(var(--u)*.74));font-weight:700;letter-spacing:.32em;color:var(--sky)}
+.prod .pcaps .n{display:block;font-size:max(11px,calc(var(--u)*.68));font-weight:600;letter-spacing:.12em;line-height:1;color:rgba(214,228,248,.45);padding:0;margin:0;transition:color .4s var(--e)}
+.prod .pcaps h4{font-size:max(12px,calc(var(--u)*.78));font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t1);transition:color .4s var(--e)}
+.prod .pcaps p{margin-top:calc(var(--u)*.35);font-size:max(12px,calc(var(--u)*.74));line-height:1.45;color:var(--t2);max-width:calc(var(--u)*24)}
+.prod .pcaps li:hover .n,.prod .pcaps li:hover h4{color:var(--sky)}
+.prod.st-1:not(.st-2) .pcaps li:nth-child(1) .n,.prod.st-2:not(.st-3) .pcaps li:nth-child(2) .n,.prod.st-3 .pcaps li:nth-child(3) .n{color:var(--sky)}
+/* Model Diagnosis: tablet apaisada con las capturas reales (la segunda aparece al avanzar) */
+.tab.ls{padding:calc(var(--u)*.7)}
+.scr.ls{position:relative;display:block;padding:0;gap:0;background:#0a0a12;aspect-ratio:2000/1126;border-radius:calc(var(--u)*.9);overflow:hidden}
+.scr.ls img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:opacity .9s var(--e)}
+.scr.ls .s2{opacity:0}
+.s-md.st-2 .scr.ls .s2,.s-md.st-3 .scr.ls .s2{opacity:1}
+.hdev img.mock{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6)) drop-shadow(0 0 40px rgba(63,124,255,.25))}
+.stg2 .hk{display:none}
+
+/* ==================================================================
+   Plantilla de producto · rejilla editorial
+   Tesis espacial: dos columnas que comparten línea superior e inferior.
+   Izquierda: pregunta y producto arriba, capacidades abajo.
+   Derecha: héroe + vistas de apoyo con la misma altura total; el CTA cierra abajo a la derecha.
+   ================================================================== */
+@media (min-width:1101px) and (min-aspect-ratio:5/4){
+  .prod.sx{--ch:calc(var(--u)*27);padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*9.4);
+    grid-template-columns:minmax(0,30fr) minmax(0,64fr);grid-template-rows:auto auto auto;align-content:center;align-items:start;column-gap:6%;row-gap:0}
+  .s-ra.sx{--ch:calc(var(--u)*24.5)}
+  /* columna editorial */
+  .sx .left{grid-column:1;grid-row:1;align-self:start}
+  .sx .q{margin-top:calc(var(--u)*1);font-size:max(28px,calc(var(--u)*2.5));line-height:1.06;text-wrap:balance}
+  .sx .pid{margin-top:calc(var(--u)*1.5);gap:calc(var(--u)*.8)}
+  .sx .pid .acr,.sx .pid .acr.sm{font-size:max(34px,calc(var(--u)*3.3))}
+  .sx .pid .name{font-size:max(13px,calc(var(--u)*.78))}
+  /* capacidades: un único contenedor, filas compactas; cierra la línea inferior */
+  .sx .pcaps{grid-column:1;grid-row:3;align-self:end;display:block;margin:calc(var(--u)*2.4) 0 0;padding:calc(var(--u)*.25) calc(var(--u)*1.2);border-radius:calc(var(--u)*1.1);
+    background:linear-gradient(160deg,rgba(14,28,78,.45),rgba(4,9,28,.55));box-shadow:inset 0 0 0 1px rgba(170,205,255,.14)}
+  .sx .pcaps li{display:grid;grid-template-columns:calc(var(--u)*2.4) minmax(0,1fr);align-items:baseline;margin:0;padding:calc(var(--u)*.75) 0;
+    background:none!important;box-shadow:none!important;backdrop-filter:none;-webkit-backdrop-filter:none;border-radius:0}
+  .sx .pcaps li+li{border-top:1px solid rgba(210,228,255,.1)}
+  .sx .pcaps li>div{min-width:0}
+  .sx .pcaps .n{font-size:max(15px,calc(var(--u)*1.15));font-weight:500;letter-spacing:-.02em;color:rgba(214,228,248,.42)}
+  .sx .pcaps p{font-size:max(11px,calc(var(--u)*.7));margin-top:calc(var(--u)*.2)}
+  /* escenario de producto: misma altura que la columna editorial */
+  .sx .parea{position:relative;grid-column:2;grid-row:1/4;align-self:stretch;margin:0;min-height:0;
+    display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end}
+  .sx .parea::before{content:"";position:absolute;inset:-12% -8%;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(2,4,12,.85),rgba(2,4,12,.42) 62%,transparent)}
+  .stg2{display:flex;justify-content:flex-end;align-items:flex-start;gap:calc(var(--u)*1.2);width:100%}
+  .stg2 .hero{flex:none;display:flex;flex-direction:column;align-items:center;row-gap:calc(var(--u)*1.4)}
+  .stg2 .hero>.demo{margin:0;align-self:center}
+  .stg2 .hv{flex:none;height:var(--ch);display:block}
+  .stg2 .hdev,.stg2 .device{position:relative;flex:none;left:auto;top:auto;bottom:auto;height:var(--ch);width:auto;transform:translateY(24px)}
+  .scene.active .stg2 .device{transform:none;transition-delay:.7s}
+  .stg2 .tilt{height:100%}
+  .stg2 .tilt>img,.stg2 img.mock{height:100%!important;width:auto!important;max-width:none}
+  .stg2 .tab{height:100%;width:auto}
+  .stg2 .tab.ls{aspect-ratio:1.69}
+  .stg2 .tab.ls .scr.ls{height:100%;aspect-ratio:auto}
+  /* vistas de apoyo: dos tarjetas iguales, mismo marco y radio, alineadas con el héroe arriba y abajo */
+  .stg2 .shots{flex:1 1 0;height:var(--ch);max-width:calc(var(--u)*30);min-width:0;display:flex;flex-direction:column;gap:calc(var(--u)*1.2)}
+  .stg2 .shot{flex:1 1 0;min-height:0;margin:0;display:grid;place-items:center;padding:calc(var(--u)*.8);border-radius:calc(var(--u)*1.1);overflow:hidden;
+    background:linear-gradient(160deg,rgba(14,28,78,.5),rgba(4,9,28,.6));box-shadow:inset 0 0 0 1px rgba(170,205,255,.16),0 24px 44px -22px rgba(0,0,0,.85)}
+  .stg2 .shot.ref{opacity:0;transform:translateY(14px);transition:opacity .8s var(--eo) 1s,transform .9s var(--eo) 1s}
+  .scene.active .stg2 .shot.ref{opacity:1;transform:none}
+  .stg2 .shot.ref:nth-child(2){transition-delay:1.15s}
+  .stg2 .shot{position:relative}
+  .stg2 .shot,.stg2 .screen.shot{background:none!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:0;overflow:visible}
+  .stg2 .shot.ref img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6))}
+  .stg2 .screen.shot{padding:0}
+  .stg2 .screen.shot .frame{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);height:100%;width:auto;aspect-ratio:1468/672;max-width:100%;border-radius:calc(var(--u)*.9);box-shadow:inset 0 0 0 1px rgba(170,205,255,.18),0 18px 30px -10px rgba(0,0,0,.6)}
+  .stg2 .screen.shot .frame>img{width:100%;height:100%;object-fit:contain}
+  .stg2 .screen .frame>img{filter:brightness(.78) contrast(.95)}
+  /* sin material de apoyo: no se reservan huecos; el héroe queda centrado */
+  .stg2 .ph{display:none}
+  .stg2 .shots:not(:has(.shot:not(.ph))){display:none}
+  .stg2:not(:has(.shot:not(.ph))){justify-content:center}
+  .sx .parea:not(:has(.shot:not(.ph))){align-items:center}
 }
 
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001ms!important;animation:none!important}}
@@ -727,7 +1097,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   </section>
 
   <!-- ============ 03 · IMPACT · hub de tres rutas ============ -->
-  <section class="scene s03" data-chap="2" data-steps="2" data-auto="2400" data-chain="950" aria-label="Three ways to create impact">
+  <section class="scene s03" data-chap="2" data-steps="1" data-chain="950" aria-label="Three ways to create impact">
     <div class="head">
       <h2 class="mega"><span class="line"><span style="--d:.2s">Three ways</span></span><span class="line"><span style="--d:.32s"><em>to create impact</em></span></span></h2>
     </div>
@@ -755,26 +1125,27 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="crumb a" style="--d:.1s"><img class="amark" src="assets/brand/astara-logo-white.svg" alt="Astara Intelligence"> <i>/</i> <b>Solutions</b></div>
       <h2 class="mega"><span class="line"><span style="--d:.2s">We turn intelligence</span></span><span class="line"><span style="--d:.32s"><em>into working systems.</em></span></span></h2>
       <p class="sup a" style="--d:.5s">Platforms, dashboards and product ecosystems that connect data, decisions and operations.</p>
+      <ul class="spts">
+        <li class="a" style="--d:.6s"><b>Digital positioning</b><span>We identify opportunities for differentiation and market growth.</span></li>
+        <li class="a" style="--d:.7s"><b>Unified data &amp; business view</b><span>An integrated view that improves decision-making and business performance.</span></li>
+        <li class="a" style="--d:.8s"><b>AI-powered solutions</b><span>Technologies that optimise operations and improve customer experience and loyalty.</span></li>
+        <li class="a" style="--d:.9s"><b>Digital marketplaces</b><span>Digital platforms that expand the business and enhance the customer experience.</span></li>
+      </ul>
     </div>
 
     <div class="sys">
-      <button type="button" class="world w-pl" data-world="platforms">
-        <span class="surf" aria-hidden="true"><span class="pic"><img src="assets/solutions/hub-platforms.png" alt=""></span></span>
-        <h3 class="wt">Platforms</h3>
-        <p class="wd">Purpose-built systems for specific business needs.</p>
-        <span class="wx"><span class="wxt">Explore</span><b>→</b></span>
-      </button>
+      <svg class="hexes" viewBox="0 0 2000 830" role="img" aria-label="Digital competitive edge, next-gen digital platforms, accelerated impact solutions"><path class="hx" pathLength="1" style="--d:0.81s" d="M282.0 2.0 L418.8 81.0 L418.8 239.0 L282.0 318.0 L145.2 239.0 L145.2 81.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M568.8 2.0 L705.6 81.0 L705.6 239.0 L568.8 318.0 L432.0 239.0 L432.0 81.0Z"/><path class="hx" pathLength="1" style="--d:0.52s" d="M855.6 2.0 L992.4 81.0 L992.4 239.0 L855.6 318.0 L718.8 239.0 L718.8 81.0Z"/><path class="hx" pathLength="1" style="--d:0.52s" d="M1142.4 2.0 L1279.2 81.0 L1279.2 239.0 L1142.4 318.0 L1005.6 239.0 L1005.6 81.0Z"/><path class="hx" pathLength="1" style="--d:0.66s" d="M1429.2 2.0 L1566.0 81.0 L1566.0 239.0 L1429.2 318.0 L1292.4 239.0 L1292.4 81.0Z"/><path class="hx" pathLength="1" style="--d:0.81s" d="M1716.0 2.0 L1852.8 81.0 L1852.8 239.0 L1716.0 318.0 L1579.2 239.0 L1579.2 81.0Z"/><path class="hx" pathLength="1" style="--d:0.96s" d="M138.0 254.0 L274.8 333.0 L274.8 491.0 L138.0 570.0 L1.2 491.0 L1.2 333.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M712.8 254.0 L849.6 333.0 L849.6 491.0 L712.8 570.0 L576.0 491.0 L576.0 333.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M1287.6 254.0 L1424.4 333.0 L1424.4 491.0 L1287.6 570.0 L1150.8 491.0 L1150.8 333.0Z"/><path class="hx" pathLength="1" style="--d:0.96s" d="M1862.4 254.0 L1999.2 333.0 L1999.2 491.0 L1862.4 570.0 L1725.6 491.0 L1725.6 333.0Z"/><path class="hx" pathLength="1" style="--d:0.97s" d="M282.0 507.0 L418.8 586.0 L418.8 744.0 L282.0 823.0 L145.2 744.0 L145.2 586.0Z"/><path class="hx" pathLength="1" style="--d:0.83s" d="M568.8 507.0 L705.6 586.0 L705.6 744.0 L568.8 823.0 L432.0 744.0 L432.0 586.0Z"/><path class="hx" pathLength="1" style="--d:0.68s" d="M855.6 507.0 L992.4 586.0 L992.4 744.0 L855.6 823.0 L718.8 744.0 L718.8 586.0Z"/><path class="hx" pathLength="1" style="--d:0.68s" d="M1142.4 507.0 L1279.2 586.0 L1279.2 744.0 L1142.4 823.0 L1005.6 744.0 L1005.6 586.0Z"/><path class="hx" pathLength="1" style="--d:0.82s" d="M1429.2 507.0 L1566.0 586.0 L1566.0 744.0 L1429.2 823.0 L1292.4 744.0 L1292.4 586.0Z"/><path class="hx" pathLength="1" style="--d:0.97s" d="M1716.0 507.0 L1852.8 586.0 L1852.8 744.0 L1716.0 823.0 L1579.2 744.0 L1579.2 586.0Z"/><g class="hf" style="--d:1.10s"><path d="M425.4 254.0 L562.2 333.0 L562.2 491.0 L425.4 570.0 L288.6 491.0 L288.6 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="425" y="378"><tspan x="425" dy="0">Digital</tspan><tspan x="425" dy="52">competitive</tspan><tspan x="425" dy="52">edge</tspan></text></g><g class="hf" style="--d:1.28s"><path d="M1000.2 254.0 L1137.0 333.0 L1137.0 491.0 L1000.2 570.0 L863.4 491.0 L863.4 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="1000" y="378"><tspan x="1000" dy="0">Next-gen</tspan><tspan x="1000" dy="52">digital</tspan><tspan x="1000" dy="52">platforms</tspan></text></g><g class="hf" style="--d:1.46s"><path d="M1575.0 254.0 L1711.8 333.0 L1711.8 491.0 L1575.0 570.0 L1438.2 491.0 L1438.2 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="1575" y="378"><tspan x="1575" dy="0">Accelerated</tspan><tspan x="1575" dy="52">impact</tspan><tspan x="1575" dy="52">solutions</tspan></text></g></svg>
       <button type="button" class="world w-hb" data-world="highbeam">
-        <span class="surf" aria-hidden="true"><span class="pic pic-hb"><img src="assets/solutions/hub-highbeam.png" alt=""></span></span>
+        <span class="surf" aria-hidden="true"><span class="pic pic-hb"><img src="assets/bg/highbeam-01.jpg" alt=""></span></span>
         <h3 class="wt">HighBeam</h3>
-        <p class="wd">A unified intelligence ecosystem for automotive decision-making.</p>
-        <span class="wx"><span class="wxt">Explore</span><b>→</b></span>
+        <p class="wd">One intelligence layer — from market signal to commercial decision.</p>
+        <span class="wx"><span class="wxt">Enter HighBeam</span><b>→</b></span>
       </button>
     </div>
   </section>
 
   <!-- ============ 05 · HIGHBEAM · el gran reveal ============ -->
-  <section class="scene s05" data-chap="4" data-steps="4" data-auto="3600,2800,2400,2400" aria-label="HighBeam Intelligence Suite">
+  <section class="scene s05" data-chap="4" data-steps="4" data-auto="3000,1500,2000,1800" aria-label="HighBeam Intelligence Suite">
     <div class="streaks img"></div>
     <div class="wm"><div class="wm-inner" id="wmInner">
       <div class="wm-word" id="wmWord">HighBeam</div>
@@ -786,68 +1157,244 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div aria-hidden="true"></div>
       <div class="eco">
         <h2><span class="line"><span>The unified intelligence ecosystem</span></span></h2>
-        <p>From fragmented silos to synchronized action.</p>
+        <div class="subs"><p class="p1">From fragmented silos to synchronized action.</p><p class="p2">Now extending to price, sales and stock.</p></div>
       </div>
       <div class="dimwrap">
         <div class="dims">
-          <div class="dim glass" style="--d:.1s"><img src="assets/solutions/card-strategy.png" alt="">
-            <div class="t"><div class="hbl">HighBeam</div><h3>Strategy</h3><div class="desc">Executive Benchmarking &amp; Alerting.</div><div class="more"><div class="qq">Are we winning or losing relevance today?</div><div class="prd">Digital Competitive Index <span>· DCI</span></div></div></div></div>
-          <div class="dim glass" style="--d:.28s"><img src="assets/solutions/card-marketing.png" alt="">
-            <div class="t"><div class="hbl">HighBeam</div><h3>Marketing</h3><div class="desc">Investment Optimization &amp; Operations.</div><div class="more"><div class="qq">How do we optimize our budget to close the gap?</div><div class="prd">Automotive Performance Report <span>· APR</span></div></div></div></div>
-          <div class="dim glass" style="--d:.46s"><img src="assets/solutions/card-product.png" alt="">
-            <div class="t"><div class="hbl">HighBeam</div><h3>Product</h3><div class="desc">Perception Alignment &amp; Pitch Tuning.</div><div class="more"><div class="qq">We cannot change the car, but can we change the conversation?</div><div class="prd">Model Diagnosis</div></div></div></div>
-          <div class="dim glass" style="--d:.64s"><img src="assets/solutions/card-retail.png" alt="">
-            <div class="t"><div class="hbl">HighBeam</div><h3>Retail</h3><div class="desc">Network Execution &amp; Customer Experience.</div><div class="more"><div class="qq">Is the brand promise surviving the dealership experience?</div><div class="prd">Retail Analytics</div></div></div></div>
-          <div class="dim glass dim-empty" style="--d:.82s">
-            <div class="t"><div class="hbl">HighBeam</div><h3>Pricing</h3><div class="desc" aria-hidden="true" style="visibility:hidden">&nbsp;<br>&nbsp;</div></div></div>
+          <div class="dim glass" data-go="5" role="link" tabindex="0" style="--d:.05s"><img src="assets/solutions/card-strategy.png" alt="">
+            <div class="t"><h3>Strategy</h3><div class="desc">Market Position &amp; Early Warning.</div><div class="more"><div class="qq">Are we winning or losing relevance today?</div><div class="prd">Digital Competitive Index <span>· DCI</span></div></div></div></div>
+          <div class="dim glass" data-go="6" role="link" tabindex="0" style="--d:.15s"><img src="assets/solutions/card-marketing.png" alt="">
+            <div class="t"><h3>Marketing</h3><div class="desc">Investment Optimization.</div><div class="more"><div class="qq">Where should we invest to close the gap?</div><div class="prd">Automotive Performance Report <span>· APR</span></div></div></div></div>
+          <div class="dim glass" data-go="7" role="link" tabindex="0" style="--d:.25s"><img src="assets/solutions/card-product.png" alt="">
+            <div class="t"><h3>Product</h3><div class="desc">Perception vs. Reality.</div><div class="more"><div class="qq">Why is the market choosing — or rejecting — our product?</div><div class="prd">Model Diagnosis</div></div></div></div>
+          <div class="dim glass" data-go="8" role="link" tabindex="0" style="--d:.35s"><img src="assets/solutions/card-retail.png" alt="">
+            <div class="t"><h3>Retail</h3><div class="desc">Network Execution &amp; Customer Experience.</div><div class="more"><div class="qq">Is the brand promise surviving the dealership experience?</div><div class="prd">Retail Analytics</div></div></div></div>
+          <div class="dim glass nw" data-go="9" role="link" tabindex="0" style="--d:.45s"><img src="assets/solutions/card-market.svg" alt=""><span class="ray" aria-hidden="true"></span>
+            <div class="t"><div class="hbl"><span class="tag">New</span></div><h3>Pricing Intelligence</h3><div class="desc">Pricing · Sales · Stock · Resale.</div><div class="more"><div class="qq">Are we priced to win?</div><div class="prd">Pricing Intelligence</div></div></div></div>
         </div>
+        <div class="journey" aria-hidden="true"><span><b>01</b>Relevance</span><span><b>02</b>Investment</span><span><b>03</b>Perception</span><span><b>04</b>Dealership</span><span><b>05</b>Pricing · Sales · Stock · Resale</span></div>
       </div>
-      <div class="truth"><p><span class="line"><span><em>One source of truth</em> for the entire organization.</span></span></p></div>
+      <div class="truth"><p><span class="line"><span><em>One intelligence layer.</em> From market signal to commercial decision.</span></span></p></div>
     </div>
   </section>
 
-  <!-- ============ 06 · HIGHBEAM / STRATEGY · DCI ============ -->
-  <section class="scene prod s06" data-chap="5" data-steps="3" aria-label="HighBeam Strategy, Digital Competitive Index">
+
+  <!-- ============ M1 · HIGHBEAM / STRATEGY · DCI ============ -->
+  <section class="scene prod s06 sx" data-chap="5" data-steps="3" data-hb aria-label="HighBeam Strategy, Digital Competitive Index">
     <div class="left">
-      <div class="crumb a" style="--d:.1s">HighBeam <i>/</i> <b>Strategy</b></div>
+      <div class="eyebrow a" style="--d:.1s">Strategy</div>
       <h2 class="q"><span class="line"><span style="--d:.18s">Are we winning</span></span><span class="line"><span style="--d:.28s">or losing relevance</span></span><span class="line"><span style="--d:.38s">today?</span></span></h2>
       <div class="pid a" style="--d:.55s"><span class="acr">DCI</span><span class="name"><small>Product</small>Digital Competitive Index</span></div>
-      <ol class="pcaps">
-        <li class="glass a" style="--d:.7s"><span class="n">01</span><div><h4>Single currency</h4><p>Web, Search, Social, Reviews and UX combined into one weighted KPI.</p></div></li>
-        <li class="glass a" style="--d:.8s"><span class="n">02</span><div><h4>Monthly benchmarking</h4><p>Dynamic comparison against your actual competitive set.</p></div></li>
-        <li class="glass a" style="--d:.9s"><span class="n">03</span><div><h4>Early warning system</h4><p>Detect visibility or reputation drops before they affect market share.</p></div></li>
-      </ol>
     </div>
     <div class="parea">
-      <div class="hv" id="dciVisual">
-        <span class="orb o1" aria-hidden="true"></span><span class="orb o2" aria-hidden="true"></span>
-        <div class="hdev" id="dciDevice">
+      <div class="stg2">
+        <div class="hero">
+        <div class="device">
           <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
-          <div class="tilt"><img src="assets/highbeam/suite/dci-tablet.png" alt="Digital Competitive Index dashboard on a tablet"><div class="scan"></div></div>
+          <div class="tilt"><img src="assets/highbeam/suite/dci-tablet.png" alt="DCI radar versus average competitors on a tablet" style="width:100%"><div class="scan"></div><span class="ring"><span class="callout">Vs. your competitive set</span></span></div>
         </div>
-        <div class="hk k1"><span>DCI score</span><b>2.69</b></div>
-        <div class="hk k2"><span>Vs. avg.<br>competitors</span><b>&minus;1.00</b></div>
+          <a class="demo a" style="--d:1.45s" href="#" data-demo="dci" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
+        </div>
+        <div class="shots">
+          <div class="screen glass shot"><div class="frame">
+          <img src="assets/highbeam/digital-competitive-index/dashboard-indonesia.png" alt="Digital Competitive Index dashboard">
+          <span class="dimall"></span>
+          <span class="spot k1" style="left:33.7%;top:0;width:33.2%;height:32.4%"><span class="callout">One weighted score</span></span>
+          <span class="spot k3" style="left:66.9%;top:0;width:33.1%;height:32.4%"><span class="callout">Visibility alert</span></span>
+        </div></div>
+          <figure class="shot ref"><img src="assets/highbeam/digital-competitive-index/ref-1.png" alt="Digital Competitive Index: modules of the online tracking dashboard"></figure>
+        </div>
       </div>
-      <div class="pcap-note a" style="--d:1.5s"><span class="pill solid">DCI · market view</span><span class="label">Sample data</span></div>
     </div>
+    <ol class="pcaps">
+      <li class="a" style="--d:1.05s"><span class="n">01</span><div><h4>Single currency</h4><p>Web · Search · Social · Reviews · UX</p></div></li>
+      <li class="a" style="--d:1.15s"><span class="n">02</span><div><h4>Monthly benchmarking</h4><p>Dynamic comparison against competitive set</p></div></li>
+      <li class="a" style="--d:1.25s"><span class="n">03</span><div><h4>Early warning</h4><p>Detect relevance drops early</p></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ M2 · HIGHBEAM / MARKETING · AUTOMOTIVE PERFORMANCE REPORT ============ -->
+  <section class="scene prod s-apr sx" data-chap="6" data-steps="3" data-hb aria-label="HighBeam Marketing, Automotive Performance Report">
+    <div class="left">
+      <div class="eyebrow a" style="--d:.1s">Marketing</div>
+      <h2 class="q"><span class="line"><span style="--d:0.18s">Where should we</span></span><span class="line"><span style="--d:0.28s">invest to close</span></span><span class="line"><span style="--d:0.38s">the gap?</span></span></h2>
+      <div class="pid a" style="--d:.55s"><span class="acr sm">APR</span><span class="name"><small>Product</small>Automotive Performance Report</span></div>
+    </div>
+    <div class="parea">
+      <div class="stg2">
+        <div class="hero">
+      <div class="hv">
+          <div class="hdev">
+            <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
+            <div class="tilt"><img class="mock" src="assets/highbeam/automotive-performance-report/mockup-apr.png" alt="Automotive Performance Report on a tablet"><div class="scan t2"></div></div>
+          </div>
+          <div class="hk k1"><span>Share of voice<br>Our C-SUV</span><b>18%</b></div>
+          <div class="hk k2"><span>Gap vs.<br>segment leader</span><b>−7pp</b></div>
+        </div>
+          <a class="demo a" style="--d:1.45s" href="#" data-demo="apr" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
+        </div>
+        <div class="shots">
+          <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-1.png" alt="Share of voice and segment charts"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-2.jpg" alt="Pick-up segment analysis and digital advertising activity"></figure>
+        </div>
+      </div>
+    </div>
+    <ol class="pcaps">
+      <li class="a" style="--d:1.05s"><span class="n">01</span><div><h4>Segment-by-segment benchmarking</h4><p>Each model measured against the rivals competing for the same buyer.</p></div></li>
+      <li class="a" style="--d:1.15s"><span class="n">02</span><div><h4>Paid · Owned · Earned</h4><p>Investment, owned channels and reputation read together.</p></div></li>
+      <li class="a" style="--d:1.25s"><span class="n">03</span><div><h4>Actionable ROI</h4><p>Move budget from low-yield channels to the models under pressure.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ M3 · HIGHBEAM / PRODUCT · MODEL DIAGNOSIS ============ -->
+  <section class="scene prod s-md sx" data-chap="7" data-steps="3" data-hb aria-label="HighBeam Product, Model Diagnosis">
+    <div class="left">
+      <div class="eyebrow a" style="--d:.1s">Product</div>
+      <h2 class="q"><span class="line"><span style="--d:0.18s">Why is the market</span></span><span class="line"><span style="--d:0.28s">choosing — or rejecting —</span></span><span class="line"><span style="--d:0.38s">our product?</span></span></h2>
+      <div class="pid a" style="--d:.55s"><span class="acr sm">MD</span><span class="name"><small>Product</small>Model Diagnosis</span></div>
+    </div>
+    <div class="parea">
+      <div class="stg2">
+        <div class="hero">
+      <div class="hv">
+          <div class="hdev">
+            <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
+            <div class="tilt"><div class="tab ls" role="img" aria-label="Model Diagnosis on a tablet: finding videos and reading the project results"><div class="scr ls">
+              <img class="s1" src="assets/highbeam/model-diagnosis/md-find-videos.jpg" alt="">
+              <img class="s2" src="assets/highbeam/model-diagnosis/md-project-results.jpg" alt="">
+            </div></div><div class="scan t2"></div></div>
+          </div>
+          <div class="hk k1"><span>Top objection<br>C-SUV</span><b>Range</b></div>
+          <div class="hk k2"><span>Perception gap<br>Range</span><b>−37</b></div>
+        </div>
+          <a class="demo a" style="--d:1.45s" href="#" data-demo="md" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
+        </div>
+        <div class="shots">
+          <div class="shot ph" aria-label="Image pending"><span>Image 1 · pending</span></div>
+          <div class="shot ph" aria-label="Image pending"><span>Image 2 · pending</span></div>
+        </div>
+      </div>
+    </div>
+    <ol class="pcaps">
+      <li class="a" style="--d:1.05s"><span class="n">01</span><div><h4>The reality gap</h4><p>Official product proposition versus what customers actually perceive.</p></div></li>
+      <li class="a" style="--d:1.15s"><span class="n">02</span><div><h4>Tactical adaptation</h4><p>We cannot change the car — but we can change the conversation.</p></div></li>
+      <li class="a" style="--d:1.25s"><span class="n">03</span><div><h4>Strategic defense</h4><p>Structured evidence for pricing, trims and future generations.</p></div></li>
+    </ol>
+  </section>
+
+
+  <!-- ============ M4 · HIGHBEAM / RETAIL · RETAIL ANALYTICS ============ -->
+  <section class="scene prod s-ra sx" data-chap="8" data-steps="3" data-hb aria-label="HighBeam Retail, Retail Analytics">
+    <div class="left">
+      <div class="eyebrow a" style="--d:.1s">Retail</div>
+      <h2 class="q"><span class="line"><span style="--d:0.18s">Is the brand promise</span></span><span class="line"><span style="--d:0.28s">surviving the dealership</span></span><span class="line"><span style="--d:0.38s">experience?</span></span></h2>
+      <div class="pid a" style="--d:.55s"><span class="acr sm">RA</span><span class="name"><small>Product</small>Retail Analytics</span></div>
+    </div>
+    <div class="parea">
+      <div class="stg2">
+        <div class="hero">
+      <div class="hv">
+          <div class="hdev">
+            <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
+            <div class="tilt"><img class="mock" src="assets/highbeam/retail-analytics/mockup-retail.png" alt="Retail Analytics on a tablet"><div class="scan t2"></div></div>
+          </div>
+          <div class="hk k1"><span>Your dealer<br>rating</span><b class="o">3.2★</b></div>
+          <div class="hk k2 ok"><span>Competitor<br>next door</span><b>4.8★</b></div>
+        </div>
+          <a class="demo a" style="--d:1.45s" href="#" data-demo="ra" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
+        </div>
+        <div class="shots">
+          <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-desktop.png" alt="Retail Analytics dashboard on desktop: map and key figures"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-tablet.png" alt="Retail Analytics comparison view on a tablet"></figure>
+        </div>
+      </div>
+    </div>
+    <ol class="pcaps">
+      <li class="a" style="--d:1.05s"><span class="n">01</span><div><h4>The ground truth</h4><p>The brand promise measured against the real dealer experience.</p></div></li>
+      <li class="a" style="--d:1.15s"><span class="n">02</span><div><h4>Zone manager empowerment</h4><p>Objective dealer comparisons to prioritise where to act.</p></div></li>
+      <li class="a" style="--d:1.25s"><span class="n">03</span><div><h4>Conversion protection</h4><p>Spot reputation leaks before they cost sales.</p></div></li>
+    </ol>
+  </section>
+
+  <!-- ============ M5 · HIGHBEAM / PRICING INTELLIGENCE ============ -->
+  <section class="scene prod s-pi sx" data-chap="9" data-steps="3" data-hb aria-label="HighBeam Pricing Intelligence">
+    <div class="left">
+      <div class="eyebrow a" style="--d:.1s">Pricing Intelligence</div>
+      <h2 class="q"><span class="line"><span style="--d:.18s">Are we priced</span></span><span class="line"><span style="--d:.28s">to win?</span></span></h2>
+      <div class="pid a" style="--d:.55s"><span class="acr sm">PI</span><span class="name"><small>Product</small>Pricing Intelligence</span></div>
+    </div>
+    <div class="parea">
+      <div class="stg2">
+        <div class="hero">
+      <div class="hv">
+          <div class="hdev">
+            <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
+            <div class="tilt"><div class="tab" role="img" aria-label="Pricing Intelligence dashboard on a tablet"><div class="scr">
+              <div class="sh"><div><div class="lb">Effective offer · C-SUV</div><div class="big">€4,000</div><div class="sm">Competitor X · discount ↑ from €2,500</div></div>
+                <div class="tl"><span>12W</span><span class="on">26W</span><span>52W</span></div></div>
+              <div class="pn grow"><div class="lb">Discount vs. market share</div>
+                <svg viewBox="0 0 300 120" preserveAspectRatio="none" aria-hidden="true">
+                  <g stroke="rgba(255,255,255,.08)"><path d="M0 30H300M0 60H300M0 90H300"/></g>
+                  <path class="draw" pathLength="1" d="M0 82 H150 V46 H300" fill="none" stroke="#ff9f80" stroke-width="2" stroke-dasharray="1" vector-effect="non-scaling-stroke"/>
+                  <path d="M0 100 C40 98 90 99 150 96 S210 70 240 58 S280 44 300 40 V120 H0Z" fill="rgba(139,205,255,.12)"/>
+                  <path class="draw" pathLength="1" d="M0 100 C40 98 90 99 150 96 S210 70 240 58 S280 44 300 40" fill="none" stroke="#8bcdff" stroke-width="2.4" vector-effect="non-scaling-stroke"/>
+                  <path d="M150 0V120" stroke="rgba(255,255,255,.25)" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>
+                </svg>
+                <div class="lg"><span><i class="o"></i>Effective discount</span><span><i></i>Market share</span></div></div>
+              <div class="pn"><table><thead><tr><th>Model</th><th>List</th><th>Effective</th><th>Monthly</th></tr></thead><tbody>
+                <tr><td>Competitor X</td><td>€34,900</td><td><b>€30,900</b></td><td>€249</td></tr>
+                <tr class="me"><td>Our model</td><td>€33,500</td><td>€31,000</td><td>€289</td></tr>
+                <tr><td>Competitor Y</td><td>€35,200</td><td>€32,700</td><td>€305</td></tr></tbody></table></div>
+            </div></div><div class="scan t2"></div></div>
+          </div>
+          <div class="hk k1"><span>Effective discount<br>Competitor X</span><b>€4,000</b></div>
+          <div class="hk k2"><span>Market share<br>Competitor X</span><b>+1.8pp</b></div>
+        </div>
+          <a class="demo a" style="--d:1.45s" href="#" data-demo="pi" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
+        </div>
+        <div class="shots">
+          <div class="shot ph" aria-label="Image pending"><span>Image 1 · pending</span></div>
+          <div class="shot ph" aria-label="Image pending"><span>Image 2 · pending</span></div>
+        </div>
+      </div>
+    </div>
+    <ol class="pcaps">
+      <li class="a" style="--d:1.05s"><span class="n">01</span><div><h4>Effective offer</h4><p>List price, discounts and finance rebuilt into what the buyer really pays.</p></div></li>
+      <li class="a" style="--d:1.15s"><span class="n">02</span><div><h4>Price-to-sales</h4><p>Every offer connected to registrations and market share.</p></div></li>
+      <li class="a" style="--d:1.25s"><span class="n">03</span><div><h4>Exit signals</h4><p>Keep, reprice or trade out — for every unit in stock.</p></div></li>
+    </ol>
+  </section>
+
+
+
+  <!-- ============ FINAL · HIGHBEAM · HOW IT CONNECTS ============ -->
+  <section class="scene cx" data-chap="10" data-steps="3" data-hb aria-label="HighBeam, how the modules connect">
+    <div class="head">
+      <div>
+        <div class="eyebrow a" style="--d:.1s">All together</div>
+        <h2 class="q"><span class="line"><span style="--d:.18s">A competitor starts</span></span><span class="line"><span style="--d:.28s">gaining share.</span></span></h2>
+      </div>
+      <div class="lede a" style="--d:.5s"><p>Five modules read the same market. Together, they separate demand from price — and show where to act.</p><span class="pill solid">Sample scenario</span></div>
+    </div>
+    <div class="chain">
+      <div class="gl g1 a" style="--d:.6s">Is it demand?</div><div class="gl g2 a" style="--d:.7s">Where does it land?</div><div class="gl g3 a" style="--d:.8s">Is it price?</div>
+      <div class="rail a" style="--d:.6s"><i></i></div>
+      <div class="node glass n1"><div class="mn"><span class="nn">01</span>Strategy</div><div class="mp">Digital Competitive Index</div><h4>Its digital relevance is rising.</h4><span class="chip">↑ Early warning</span></div>
+      <div class="node glass n2"><div class="mn"><span class="nn">02</span>Marketing</div><div class="mp">Automotive Performance Report</div><h4>Its share of voice has barely moved.</h4><span class="chip flat">≈ Ad pressure</span></div>
+      <div class="node glass n3"><div class="mn"><span class="nn">03</span>Product</div><div class="mp">Model Diagnosis</div><h4>Perception of the model is unchanged.</h4><span class="chip flat">≈ Sentiment</span></div>
+      <div class="node glass n4"><div class="mn"><span class="nn">04</span>Retail</div><div class="mp">Retail Analytics</div><h4>Our dealers lose local deals where the offer bites.</h4><span class="chip hot">↓ Local conversion</span></div>
+      <div class="node glass n5"><div class="mn"><span class="nn">05</span>Pricing Intelligence</div><div class="mp">Pricing · Sales · Stock · Resale</div><h4>Effective discount up from €2,500 to €4,000, plus a sharper finance offer. Residual values begin to soften.</h4><span class="chip hot">+1.8pp share</span></div>
+    </div>
+    <div class="verdict"><p><span class="line"><span><em>Share bought through price</em> — not demand.</span></span></p><small>Not just what happened: why, and where to act first.</small></div>
   </section>
 
   <!-- ============ NAVEGACIÓN ============ -->
-  <nav class="nav" id="nav" aria-label="Presentation">
+  <nav class="nav" id="nav" aria-label="Astara Intelligence">
     <button class="brand" data-go="0" aria-label="Astara Intelligence · back to start"><img class="amark" src="assets/brand/astara-logo-white.svg" alt="Astara Intelligence"></button>
     <div class="chap">
-      <button data-go="1">Methodology</button>
-      <button data-go="2">Impact</button>
-      <button data-go="3">Solutions</button>
-      <button data-go="4">HighBeam</button>
-    </div>
-    <span class="sep"></span>
-    <div class="chap sub">
-      <button data-go="5">Strategy</button>
-      <button disabled title="Coming in the next iteration">Marketing</button>
-      <button disabled title="Coming in the next iteration">Product</button>
-      <button disabled title="Coming in the next iteration">Retail</button>
-      <button disabled title="Coming in the next iteration">Pricing</button>
+      <button data-go="1" data-chap="1">Methodology</button>
+      <button data-go="2" data-chap="2">Impact</button>
+      <div class="solx" id="solx"><button data-go="3" class="sol">Solutions</button><button data-go="4" class="hbx" aria-label="HighBeam">HighBeam</button></div>
     </div>
     <span class="cur" id="curChap"></span>
     <div class="right">
@@ -858,6 +1405,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       </span>
       <button class="arrow" id="prev" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button>
       <button class="arrow" id="next" aria-label="Next"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+    </div>
+  </nav>
+  <nav class="hbnav" id="hbnav" aria-label="HighBeam products">
+    <button class="hbl" data-go="4" aria-label="HighBeam overview">HighBeam</button>
+    <div class="hbi">
+      <button data-go="5" data-chap="5">Strategy</button>
+      <button data-go="6" data-chap="6">Marketing</button>
+      <button data-go="7" data-chap="7">Product</button>
+      <button data-go="8" data-chap="8">Retail</button>
+      <button data-go="9" data-chap="9">Pricing Intelligence</button>
+      <span class="hbsep" aria-hidden="true"></span>
+      <button data-go="10" data-chap="10" class="all">All together</button>
     </div>
   </nav>
   <div class="progress" id="progress"></div>
@@ -904,10 +1463,10 @@ document.querySelectorAll('[data-layer]').forEach(f=>f.innerHTML=L[f.dataset.lay
 
 /* ---------- Motor de escenas ---------- */
 const scenes=[...document.querySelectorAll('.scene')];
-const TOTAL=9;
-const CHAPS=['Astara','Methodology','Impact','Solutions','HighBeam','HighBeam · Strategy'];
+const TOTAL=document.querySelectorAll('.scene').length;
+const CHAPS=['Astara','Methodology','Impact','Solutions','HighBeam','HighBeam · Strategy','HighBeam · Marketing','HighBeam · Product','HighBeam · Retail','HighBeam · Pricing Intelligence','HighBeam · All together'];
 let cur=0, step=0, timers=[], lockUntil=0;
-const nav=document.getElementById('nav'), beats=document.getElementById('beats'), countEl=document.getElementById('count'), prog=document.getElementById('progress'), curChap=document.getElementById('curChap');
+const hbnav=document.getElementById('hbnav'), nav=document.getElementById('nav'), beats=document.getElementById('beats'), countEl=document.getElementById('count'), prog=document.getElementById('progress'), curChap=document.getElementById('curChap');
 const stepsOf=i=>+scenes[i].dataset.steps||0;
 const autoOf=i=>(scenes[i].dataset.auto||'').split(',').filter(Boolean).map(Number);
 const clearTimers=()=>{timers.forEach(clearTimeout);timers=[]};
@@ -928,10 +1487,17 @@ function schedule(){
 function render(entering){
   scenes.forEach((s,i)=>{const on=i===cur;s.classList.toggle('active',on);for(let k=1;k<=4;k++)s.classList.toggle('st-'+k,on&&step>=k)});
   stage.dataset.scene=cur;
+  stage.classList.toggle('hbz','hb' in scenes[cur].dataset);
+  stage.classList.toggle('hbp',scenes[cur].classList.contains('prod'));
+  stage.classList.toggle('hbr',scenes[cur].classList.contains('s-ra'));
   for(let k=1;k<=4;k++) stage.classList.toggle('st-'+k,step>=k);
   if(entering){ scenes[cur].scrollTop=0; counters(scenes[cur]); }
   const chap=+scenes[cur].dataset.chap;
-  nav.querySelectorAll('.chap [data-go]').forEach(b=>b.classList.toggle('on',+b.dataset.go===Math.min(chap,4)||(+b.dataset.go===chap&&chap>4)));
+  nav.querySelectorAll('.chap [data-chap]').forEach(b=>b.classList.toggle('on',+b.dataset.chap===chap));
+  const solx=document.getElementById('solx'); solx.classList.toggle('on',chap>=3); solx.classList.toggle('open',chap>=4);
+  solx.querySelector('.sol').classList.toggle('on',chap===3); solx.querySelector('.hbx').classList.toggle('on',chap>=4);
+  stage.classList.toggle('hbn',chap>=4&&!(chap===4&&step===0)); stage.classList.toggle('hbo',chap===4);
+  hbnav.querySelectorAll('[data-chap]').forEach(b=>b.classList.toggle('on',+b.dataset.chap===chap));
   nav.querySelector('.brand').classList.toggle('on',chap===0);
   nav.classList.toggle('hb',chap>=4);
   curChap.textContent=CHAPS[chap]||'';
@@ -941,34 +1507,39 @@ function render(entering){
   try{history.replaceState(null,'',`#${cur+1}${step?'.'+step:''}`)}catch(e){}
 }
 function go(i,s=0){ if(i<0||i>=scenes.length) return; clearTimers(); const entering=i!==cur||!scenes[i].classList.contains('active'); cur=i; step=s; render(entering); schedule(); }
-function next(){
-  if(performance.now()<lockUntil) return;
+function next(force){
+  if(!force && performance.now()<lockUntil) return;
   clearTimers();
+  /* si la escena se está animando sola, avanzar lleva directamente a la siguiente escena */
+  if(force && autoOf(cur).length && step<stepsOf(cur)){ go(cur+1); return; }
+  /* en las páginas de producto, las flechas pasan de un producto a otro sin recorrer los pasos */
+  if(force && scenes[cur].classList.contains('prod')){ go(cur+1); return; }
   if(step<stepsOf(cur)){ step++; render(false); schedule();
     const L=+scenes[cur].dataset.lock||0; if(L && step===stepsOf(cur)) lockUntil=performance.now()+L; }
   else go(cur+1);
 }
-function prev(){ lockUntil=0; clearTimers(); step>0 ? (step--,render(false)) : cur>0 && go(cur-1,stepsOf(cur-1)-(scenes[cur-1].dataset.chain?1:0)); }
+function prev(force){ lockUntil=0; clearTimers();
+  if(force && scenes[cur].classList.contains('prod') && cur>0){ go(cur-1, scenes[cur-1].classList.contains('prod')?0:stepsOf(cur-1)); return; }
+  step>0 ? (step--,render(false)) : cur>0 && go(cur-1,stepsOf(cur-1)-(scenes[cur-1].dataset.chain?1:0)); }
 
-/* Escena 04: dos mundos. HighBeam entra en su escena; Platforms aún no tiene escena propia */
-document.querySelectorAll('.world').forEach(w=>w.addEventListener('click',e=>{e.stopPropagation();
-  if(w.dataset.world==='highbeam') go(cur+1);
-  else{ const t=w.querySelector('.wxt'); t.textContent='Coming next'; clearTimeout(w._t); w._t=setTimeout(()=>t.textContent='Explore',1800); }}));
-/* Escena 06: el mock-up se inclina suavemente con el puntero */
-(()=>{const hv=document.getElementById('dciVisual'), tl=hv&&hv.querySelector('.tilt');
-  if(!hv||coarse||matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-  hv.addEventListener('pointermove',e=>{const r=hv.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
-    tl.style.transform=`perspective(1000px) rotateY(${x*9}deg) rotateX(${-y*9}deg)`});
-  hv.addEventListener('pointerleave',()=>{tl.style.transform=''});
-})();
-document.getElementById('next').addEventListener('click',e=>{e.stopPropagation();next()});
-document.getElementById('prev').addEventListener('click',e=>{e.stopPropagation();prev()});
+/* Escena 04: la tarjeta de HighBeam entra en el overview */
+document.querySelectorAll('.world').forEach(w=>w.addEventListener('click',e=>{e.stopPropagation();go(cur+1)}));
+/* Botón de demo: la dirección se configura en data-url cuando exista */
+document.querySelectorAll('.demo').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();const u=b.dataset.url; if(u) window.open(u,'_blank','noopener')}));
+/* Productos: al pasar el ratón por la tablet se inclina suavemente */
+if(!coarse && !matchMedia('(prefers-reduced-motion:reduce)').matches) document.querySelectorAll('.hdev,.device').forEach(d=>{const t=d.querySelector('.tilt'); if(!t) return;
+  d.addEventListener('pointermove',e=>{const r=d.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.transform=`perspective(1000px) rotateY(${x*10}deg) rotateX(${-y*10}deg)`});
+  d.addEventListener('pointerleave',()=>{t.style.transform=''});});
+document.getElementById('next').addEventListener('click',e=>{e.stopPropagation();next(true)});
+document.getElementById('prev').addEventListener('click',e=>{e.stopPropagation();prev(true)});
 /* El halo sigue al ratón y la pulsación lanza un destello desde el punto del clic */
 nav.addEventListener('pointermove',e=>{const b=e.target.closest('.chap button,.arrow');if(!b)return;const r=b.getBoundingClientRect();b.style.setProperty('--mx',(e.clientX-r.left)+'px');b.style.setProperty('--my',(e.clientY-r.top)+'px')});
 nav.addEventListener('pointerdown',e=>{const b=e.target.closest('.chap button:not(:disabled),.arrow');if(!b)return;const r=b.getBoundingClientRect();
   b.style.setProperty('--mx',(e.clientX-r.left)+'px');b.style.setProperty('--my',(e.clientY-r.top)+'px');b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop');
   b.addEventListener('animationend',()=>b.classList.remove('pop'),{once:true})});
 nav.addEventListener('click',e=>{const b=e.target.closest('[data-go]');e.stopPropagation();if(b)go(+b.dataset.go)});
+document.querySelectorAll('.s05 .dim[data-go]').forEach(d=>{const f=e=>{e.stopPropagation();go(+d.dataset.go)};d.addEventListener('click',f);d.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();f(e)}})});
+hbnav.addEventListener('click',e=>{const b=e.target.closest('[data-go]');e.stopPropagation();if(b)go(+b.dataset.go)});
 /* Ratón: un clic avanza. Táctil: deslizar (un toque no avanza, para poder leer y desplazar) */
 stage.addEventListener('click',e=>{ if(!coarse && !e.target.closest('.nav')) next(); });
 let tx=0,ty=0;
@@ -976,9 +1547,9 @@ stage.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].
 stage.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-tx,dy=t.clientY-ty;
   if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.4){ dx<0?next():prev(); }},{passive:true});
 addEventListener('keydown',e=>{
-  if((e.key==='Enter'||e.key===' ')&&e.target.closest&&e.target.closest('.world')) return;
-  if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();next()}
-  else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){e.preventDefault();prev()}
+  if((e.key==='Enter'||e.key===' ')&&e.target.closest&&e.target.closest('.world,.dim[data-go],.hbnav,.nav')) return;
+  if(['ArrowRight','ArrowDown','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();next(true)}
+  else if(['ArrowLeft','ArrowUp','PageUp','Backspace'].includes(e.key)){e.preventDefault();prev(true)}
   else if(e.key==='Home') go(0);
   else if(e.key==='End') go(scenes.length-1);
   else if(/^[1-9]$/.test(e.key)&&+e.key<=scenes.length) go(+e.key-1);
