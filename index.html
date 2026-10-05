@@ -1026,6 +1026,33 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .prod.sx .stg2 .shots{grid-column:1/-1;grid-row:3;margin-top:calc(var(--u)*4)}
 }
 
+/* ==================================================================
+   IMAGEN DE APOYO · una por producto, proporción 10:9 (p. ej. 1200×1080)
+   Se coloca en assets/highbeam/<producto>/apoyo.webp (o .png / .jpg). Si existe sustituye a las
+   vistas de apoyo y queda a la misma altura que el mock-up; si no existe, todo queda como estaba.
+   ================================================================== */
+.stg2 .apoyo{display:none}
+.stg2.has-apoyo .apoyo{display:block;position:relative;opacity:0;transform:translateY(14px);transition:opacity .8s var(--eo) 1s,transform .9s var(--eo) 1s}
+.scene.active .stg2.has-apoyo .apoyo{opacity:1;transform:none}
+.stg2.has-apoyo .shots{display:none!important}
+.stg2 .apoyo img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 18px 30px rgba(0,0,0,.6))}
+@media (min-aspect-ratio:1251/1000){
+  .stg2.has-apoyo .apoyo{flex:none;height:var(--ch);aspect-ratio:10/9}
+  .prod.sx .stg2.has-apoyo{justify-content:flex-end;align-items:flex-start}
+  .prod.sx .parea:has(.stg2.has-apoyo){align-items:flex-end}
+  /* mock-ups apaisados (Model Diagnosis, Retail): mock-up e imagen a la misma altura, algo menor para que quepan juntos */
+  .s-md.sx .stg2.has-apoyo,.s-ra.sx .stg2.has-apoyo{--ch:calc(var(--u)*19)}
+}
+@media (max-aspect-ratio:5/4){
+  /* Model Diagnosis: su tablet se construye con capturas y no tiene ancho propio; sin esto se colapsaba (13 px) en vertical */
+  .stg2 .hero>.hv{align-self:stretch}
+  .stg2 .tab.ls{aspect-ratio:auto}
+  .stg2.has-apoyo .apoyo{width:min(100%,calc(var(--u)*44));aspect-ratio:10/9;margin:calc(var(--u)*1.6) auto 0}
+}
+@media (max-aspect-ratio:5/4) and (min-width:600px){
+  .prod.sx .stg2.has-apoyo .apoyo{grid-column:1/-1;grid-row:3;margin-top:calc(var(--u)*3)}
+}
+
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001ms!important;animation:none!important}}
 </style>
 <noscript><style>.scene{opacity:1!important;visibility:visible!important;position:relative!important;min-height:100vh}.a,.line>span{opacity:1!important;transform:none!important}#stage{position:static!important}html,body{overflow:auto!important;height:auto!important}</style>
@@ -1238,7 +1265,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="pid a" style="--d:.55s"><span class="acr">DCI</span><span class="name"><small>Product</small>Digital Competitive Index</span></div>
     </div>
     <div class="parea">
-      <div class="stg2">
+      <div class="stg2" data-apoyo="assets/highbeam/digital-competitive-index/apoyo">
         <div class="hero">
         <div class="device">
           <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
@@ -1246,6 +1273,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
           <a class="demo a" style="--d:1.45s" href="#" data-demo="dci" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
+        <figure class="apoyo"><img alt="Digital Competitive Index: product view"></figure>
         <div class="shots">
           <div class="screen glass shot"><div class="frame">
           <img src="assets/highbeam/digital-competitive-index/dashboard-indonesia.webp" alt="Digital Competitive Index dashboard">
@@ -1272,7 +1300,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="pid a" style="--d:.55s"><span class="acr sm">APR</span><span class="name"><small>Product</small>Automotive Performance Report</span></div>
     </div>
     <div class="parea">
-      <div class="stg2">
+      <div class="stg2" data-apoyo="assets/highbeam/automotive-performance-report/apoyo">
         <div class="hero">
       <div class="hv">
           <div class="hdev">
@@ -1284,6 +1312,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
           <a class="demo a" style="--d:1.45s" href="#" data-demo="apr" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
+        <figure class="apoyo"><img alt="Automotive Performance Report: product view"></figure>
         <div class="shots">
           <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-1.webp" alt="Share of voice and segment charts"></figure>
           <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-2.webp" alt="Pick-up segment analysis and digital advertising activity"></figure>
@@ -1305,7 +1334,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="pid a" style="--d:.55s"><span class="acr sm">MD</span><span class="name"><small>Product</small>Model Diagnosis</span></div>
     </div>
     <div class="parea">
-      <div class="stg2">
+      <div class="stg2" data-apoyo="assets/highbeam/model-diagnosis/apoyo">
         <div class="hero">
       <div class="hv">
           <div class="hdev">
@@ -1320,6 +1349,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
           <a class="demo a" style="--d:1.45s" href="#" data-demo="md" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
+        <figure class="apoyo"><img alt="Model Diagnosis: product view"></figure>
         <div class="shots">
           <div class="shot ph" aria-label="Image pending"><span>Image 1 · pending</span></div>
           <div class="shot ph" aria-label="Image pending"><span>Image 2 · pending</span></div>
@@ -1342,7 +1372,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="pid a" style="--d:.55s"><span class="acr sm">RA</span><span class="name"><small>Product</small>Retail Analytics</span></div>
     </div>
     <div class="parea">
-      <div class="stg2">
+      <div class="stg2" data-apoyo="assets/highbeam/retail-analytics/apoyo">
         <div class="hero">
       <div class="hv">
           <div class="hdev">
@@ -1354,6 +1384,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
           <a class="demo a" style="--d:1.45s" href="#" data-demo="ra" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
+        <figure class="apoyo"><img alt="Retail Analytics: product view"></figure>
         <div class="shots">
           <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-desktop.webp" alt="Retail Analytics dashboard on desktop: map and key figures"></figure>
           <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-tablet.webp" alt="Retail Analytics comparison view on a tablet"></figure>
@@ -1375,7 +1406,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="pid a" style="--d:.55s"><span class="acr sm">PI</span><span class="name"><small>Product</small>Pricing Intelligence</span></div>
     </div>
     <div class="parea">
-      <div class="stg2">
+      <div class="stg2" data-apoyo="assets/highbeam/pricing-intelligence/apoyo">
         <div class="hero">
       <div class="hv">
           <div class="hdev">
@@ -1403,6 +1434,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         </div>
           <a class="demo a" style="--d:1.45s" href="#" data-demo="pi" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
+        <figure class="apoyo"><img alt="Pricing Intelligence: product view"></figure>
         <div class="shots">
           <div class="shot ph" aria-label="Image pending"><span>Image 1 · pending</span></div>
           <div class="shot ph" aria-label="Image pending"><span>Image 2 · pending</span></div>
@@ -1605,6 +1637,12 @@ addEventListener('keydown',e=>{
   else if(e.key==='End') go(scenes.length-1);
   else if(/^[1-9]$/.test(e.key)&&+e.key<=scenes.length) go(+e.key-1);
   else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}
+});
+/* Imagen de apoyo de cada producto: se busca apoyo.webp / .png / .jpg; si existe, se activa; si no, no pasa nada */
+document.querySelectorAll('.stg2[data-apoyo]').forEach(st=>{
+  const im=st.querySelector('.apoyo img'),exts=['webp','png','jpg'];
+  const probe=i=>{ if(i>=exts.length) return; const p=new Image(); p.onload=()=>{im.src=p.src;st.classList.add('has-apoyo')}; p.onerror=()=>probe(i+1); p.src=st.dataset.apoyo+'.'+exts[i]; };
+  probe(0);
 });
 /* Deep link: #5.2 = escena 5, paso 2 (sin pasos automáticos, para revisar) */
 const m=location.hash.match(/^#(\d+)(?:\.(\d+))?/);
