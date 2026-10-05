@@ -74,16 +74,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #stage[data-scene="0"] .bg.b0,#stage[data-scene="1"] .bg.b1,#stage[data-scene="2"] .bg.b2,
 #stage[data-scene="3"] .bg.b3,#stage.hbz .bg.b5{opacity:1;transform:none;z-index:1;transition:opacity 1.1s var(--e),transform 2.6s var(--eo)}
 #stage[data-scene="4"] #bgs .bg{transition-delay:0s,0s}
-#bgs .b0{background-image:linear-gradient(90deg,rgba(3,6,15,.86) 0%,rgba(3,6,15,.35) 46%,rgba(3,6,15,0) 100%),linear-gradient(0deg,rgba(3,6,15,.7),rgba(3,6,15,0) 40%),url(assets/bg/flow-01.jpg)}
-#bgs .b1{background-image:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.45) 40%,rgba(3,6,15,.12) 100%),url(assets/bg/flow-02.jpg)}
-#bgs .b2{background-image:linear-gradient(180deg,rgba(3,6,15,.85) 0%,rgba(3,6,15,.35) 38%,rgba(3,6,15,.5) 100%),url(assets/bg/flow-03.jpg)}
-#bgs .b3{background-image:linear-gradient(90deg,rgba(3,6,15,.9) 0%,rgba(3,6,15,.72) 36%,rgba(3,6,15,.2) 72%,rgba(3,6,15,.35) 100%),url(assets/bg/intel-03.jpg)}
-#bgs .b5{background-image:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.4) 42%,rgba(3,6,15,.55) 100%),url(assets/bg/highbeam-01.jpg)}
+#bgs .b0{background-image:linear-gradient(90deg,rgba(3,6,15,.86) 0%,rgba(3,6,15,.35) 46%,rgba(3,6,15,0) 100%),linear-gradient(0deg,rgba(3,6,15,.7),rgba(3,6,15,0) 40%),url(assets/bg/flow-01.webp)}
+#bgs .b1{background-image:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.45) 40%,rgba(3,6,15,.12) 100%),url(assets/bg/flow-02.webp)}
+#bgs .b2{background-image:linear-gradient(180deg,rgba(3,6,15,.85) 0%,rgba(3,6,15,.35) 38%,rgba(3,6,15,.5) 100%),url(assets/bg/flow-03.webp)}
+#bgs .b3{background-image:linear-gradient(90deg,rgba(3,6,15,.9) 0%,rgba(3,6,15,.72) 36%,rgba(3,6,15,.2) 72%,rgba(3,6,15,.35) 100%),url(assets/bg/intel-03.webp)}
+#bgs .b5{background-image:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.4) 42%,rgba(3,6,15,.55) 100%),url(assets/bg/highbeam-01.webp)}
 @media (max-aspect-ratio:5/4){
-  #bgs .b3{background-image:linear-gradient(180deg,rgba(3,6,15,.88) 0%,rgba(3,6,15,.7) 45%,rgba(3,6,15,.45) 100%),url(assets/bg/intel-03.jpg)}
-  #bgs .b0{background-image:linear-gradient(180deg,rgba(3,6,15,.35),rgba(3,6,15,.7)),url(assets/bg/flow-01.jpg)}
-  #bgs .b1{background-image:linear-gradient(180deg,rgba(3,6,15,.8) 0%,rgba(3,6,15,.45) 45%,rgba(3,6,15,.4)),url(assets/bg/flow-02.jpg)}
-  #bgs .b5{background-image:linear-gradient(180deg,rgba(3,6,15,.7),rgba(3,6,15,.6)),url(assets/bg/highbeam-01.jpg)}
+  #bgs .b3{background-image:linear-gradient(180deg,rgba(3,6,15,.88) 0%,rgba(3,6,15,.7) 45%,rgba(3,6,15,.45) 100%),url(assets/bg/intel-03.webp)}
+  #bgs .b0{background-image:linear-gradient(180deg,rgba(3,6,15,.35),rgba(3,6,15,.7)),url(assets/bg/flow-01.webp)}
+  #bgs .b1{background-image:linear-gradient(180deg,rgba(3,6,15,.8) 0%,rgba(3,6,15,.45) 45%,rgba(3,6,15,.4)),url(assets/bg/flow-02.webp)}
+  #bgs .b5{background-image:linear-gradient(180deg,rgba(3,6,15,.7),rgba(3,6,15,.6)),url(assets/bg/highbeam-01.webp)}
 }
 #aura{opacity:.28}
 
@@ -349,7 +349,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .s05 .streaks{left:0;right:0;bottom:-16%;height:83%;opacity:0;transition:opacity 2s var(--e)}
 .s05.active .streaks{opacity:.9;transition-delay:1.5s}
 .s05.st-1 .streaks{opacity:.45}
-.s05 .streaks.img{inset:0;height:auto;bottom:0;filter:none;background:url(assets/bg/highbeam-reveal.jpg) center 30%/cover no-repeat;
+.s05 .streaks.img{inset:0;height:auto;bottom:0;filter:none;background:url(assets/bg/highbeam-reveal.webp) center 30%/cover no-repeat;
   -webkit-mask-image:linear-gradient(to top,#000 8%,rgba(0,0,0,.6) 32%,transparent 58%);mask-image:linear-gradient(to top,#000 8%,rgba(0,0,0,.6) 32%,transparent 58%)}
 .s05.active .streaks.img{opacity:.8}
 .s05.st-1 .streaks.img{opacity:.22}
@@ -402,7 +402,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .dim-empty{background:linear-gradient(165deg,rgba(34,56,130,.5),rgba(8,14,40,.85))}
 .dim .t{position:absolute;inset:0;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:calc(var(--u)*1.5)}
 .dim .hbl{position:absolute;top:calc(var(--u)*1.4);left:calc(var(--u)*1.5);font-size:max(9px,calc(var(--u)*.56));font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:rgba(214,228,248,.8)}
-.dim h3{font-size:max(15px,calc(var(--u)*1.3));font-weight:500;letter-spacing:.08em;text-transform:uppercase;line-height:1.1;color:#fff;text-shadow:0 1px 16px rgba(3,6,15,.6);white-space:normal;text-wrap:balance}
+.dim h3{font-size:max(15px,calc(var(--u)*1.3));font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1.1;color:var(--sky);text-shadow:0 1px 16px rgba(3,6,15,.75),0 0 2px rgba(3,6,15,.4);white-space:normal;text-wrap:balance}
 .dim .desc{width:100%;max-width:calc(var(--u)*17);margin-top:calc(var(--u)*.7);min-height:5.4em;max-height:6.5em;overflow:hidden;font-size:max(11px,calc(var(--u)*.8));line-height:1.35;font-weight:600;color:rgba(238,244,255,.94);text-wrap:balance;text-shadow:0 1px 12px rgba(3,6,15,.6);
   transition:opacity .35s var(--e),max-height .5s var(--eo),min-height .5s var(--eo),margin .5s var(--eo)}
 .dim .more{width:100%;max-width:calc(var(--u)*24);max-height:0;overflow:hidden;opacity:0;transition:max-height .6s var(--eo),opacity .45s var(--e) .1s}
@@ -852,9 +852,6 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .device .scan::after{content:"";position:absolute;left:0;right:0;top:-18%;height:18%;background:linear-gradient(to bottom,transparent,rgba(139,205,255,.5),transparent);border-bottom:1px solid rgba(190,230,255,.9);animation:scan 2.4s linear infinite}
 .device:hover .scan,.s06.st-2:not(.st-3) .device .scan{opacity:1}
 /* ---- Strategy · composición con portada propia, capacidades en fila y botón de demo ---- */
-.sxbg{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:0;transition:opacity 1.2s var(--e) .1s;
-  background:linear-gradient(90deg,rgba(3,6,15,.82) 0%,rgba(3,6,15,.35) 45%,rgba(3,6,15,0) 75%),linear-gradient(0deg,rgba(3,6,15,.55),rgba(3,6,15,0) 40%),url(assets/highbeam/strategy-cover.jpg) center/cover no-repeat}
-.sx.active .sxbg{opacity:1}
 .demo{position:relative;display:inline-flex;align-items:center;gap:calc(var(--u)*.7);justify-self:start;align-self:start;margin-top:calc(var(--u)*1.6);height:max(34px,calc(var(--u)*2.2));padding:0 calc(var(--u)*1.1) 0 calc(var(--u)*1.3);border-radius:9999px;overflow:hidden;isolation:isolate;
   font-size:max(12px,calc(var(--u)*.8));font-weight:500;letter-spacing:.02em;color:var(--t1);cursor:pointer;text-decoration:none;white-space:nowrap;
   background:rgba(255,255,255,.055);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--edge-hi),inset 0 1px 0 rgba(255,255,255,.14);
@@ -871,13 +868,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .spts b{display:block;font-size:max(11px,calc(var(--u)*.74));font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t1)}
 .spts span{display:block;margin-top:calc(var(--u)*.25);font-size:max(12px,calc(var(--u)*.78));line-height:1.45;color:var(--t2)}
 .s04 .sys{height:auto;display:flex;flex-direction:column;row-gap:calc(var(--u)*1.8)}
-.hexes{display:block;width:86%;align-self:center;height:auto;overflow:visible;-webkit-mask-image:radial-gradient(ellipse 62% 75% at 50% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 62% 75% at 50% 50%,#000 55%,transparent 100%)}
+.hexes{display:block;width:var(--hex-w,78%);align-self:center;height:auto;overflow:visible;-webkit-mask-image:radial-gradient(ellipse 80% 100% at 50% 50%,#000 64%,transparent 100%);mask-image:radial-gradient(ellipse 80% 100% at 50% 50%,#000 64%,transparent 100%)}
 .hexes .hx{fill:none;stroke:rgba(139,205,255,.42);stroke-width:3;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.2s var(--eo) var(--d)}
 .s04.active .hexes .hx{stroke-dashoffset:0}
 .hexes .hf{opacity:0;transform-box:fill-box;transform-origin:50% 50%;transform:scale(.86);transition:opacity .8s var(--e) var(--d),transform 1s var(--eo) var(--d)}
 .s04.active .hexes .hf{opacity:1;transform:none}
 .hexes .hf path{fill:var(--sky);filter:drop-shadow(0 0 24px rgba(139,205,255,.55))}
 .hexes .hf text{font-family:var(--f);font-size:31px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;fill:#0b1a3a;text-anchor:middle}
+/* nombres de las herramientas en las celdas: entran con su celda, un poco después del trazo */
+.hexes .hl text{font-family:var(--f);font-size:28px;font-weight:600;letter-spacing:-.005em;fill:rgba(236,244,255,.92);text-anchor:middle;opacity:0;transition:opacity .9s var(--e) calc(var(--d) + .5s)}
+.s04.active .hexes .hl text{opacity:1}
 /* tarjeta de HighBeam más pequeña: banda horizontal con la imagen de fondo */
 .s04 .w-hb{width:100%;align-self:center;height:calc(var(--u)*15.5);flex:none;cursor:pointer;justify-content:center;padding:calc(var(--u)*1.4) calc(var(--u)*2)}
 .s04 .w-hb .pic{inset:0;border-radius:inherit}
@@ -920,7 +920,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
    Izquierda: pregunta y producto arriba, capacidades abajo.
    Derecha: héroe + vistas de apoyo con la misma altura total; el CTA cierra abajo a la derecha.
    ================================================================== */
-@media (min-width:1101px) and (min-aspect-ratio:5/4){
+/* cualquier pantalla horizontal (> 5:4): también tablets apaisadas y portátiles pequeños; ≤ 5:4 usa la columna vertical */
+@media (min-aspect-ratio:1251/1000){
   .prod.sx{--ch:calc(var(--u)*27);padding-top:calc(var(--u)*6);padding-bottom:calc(var(--u)*9.4);
     grid-template-columns:minmax(0,30fr) minmax(0,64fr);grid-template-rows:auto auto auto;align-content:center;align-items:start;column-gap:6%;row-gap:0}
   .s-ra.sx{--ch:calc(var(--u)*24.5)}
@@ -975,6 +976,56 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   .sx .parea:not(:has(.shot:not(.ph))){align-items:center}
 }
 
+/* ==================================================================
+   AJUSTES ADAPTATIVOS · tablet y portátil
+   ================================================================== */
+/* Safari en iPad: vh incluye la barra del navegador; dvh mide lo que realmente se ve */
+@supports (height:1dvh){
+  :root{--u:min(1vw,1.7778dvh)}
+  @media (max-aspect-ratio:5/4){ :root{--u:min(1.15vw,.9dvh)} }
+}
+/* HighBeam overview: en 16:9 exacto la fila de módulos + recorrido desbordaba ~14 px */
+.s05-flow{row-gap:max(12px,calc(var(--u)*1.1))}
+.s05{padding-bottom:calc(var(--nav-h) + var(--nav-b) + max(10px,calc(var(--u)*1.4)))}
+/* Táctil en horizontal: sin hover, cada módulo enseña directamente su estado "abierto" (pregunta + producto) */
+@media (hover:none) and (min-aspect-ratio:1251/1000){
+  .s05 .dim .desc{display:none}
+}
+@media (max-aspect-ratio:5/4){
+  /* el recorrido 01→05 solo tiene sentido con los módulos en fila */
+  .journey{display:none}
+  /* último módulo impar a todo el ancho, como en la suite */
+  .chain>.node:last-child:nth-child(odd){grid-column:1/-1}
+  /* aire entre la barra de HighBeam y el antetítulo */
+  .scene[data-hb]{padding-top:calc(var(--py) + var(--u)*2.8)}
+  /* fundidos bajo las barras: el contenido que se desplaza no choca con la navegación */
+  .nav::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:calc(var(--px)*-1);right:calc(var(--px)*-1);
+    bottom:calc(max(var(--nav-b),env(safe-area-inset-bottom))*-1);height:calc(100% + max(var(--nav-b),env(safe-area-inset-bottom)) + max(28px,calc(var(--u)*3)));
+    background:linear-gradient(to top,rgba(3,6,15,.94) 0%,rgba(3,6,15,.8) 55%,rgba(3,6,15,0))}
+  .hbnav::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:calc(var(--px)*-1);width:100vw;
+    top:calc(max(16px,calc(var(--u)*1.25))*-1);height:calc(100% + max(16px,calc(var(--u)*1.25)) + max(22px,calc(var(--u)*2.4)));
+    background:linear-gradient(to bottom,rgba(3,6,15,.94) 0%,rgba(3,6,15,.75) 60%,rgba(3,6,15,0))}
+}
+/* Metodología en tablet vertical: iceberg algo menor y las dos listas en paralelo, para que quepa sin desplazarse */
+@media (max-aspect-ratio:5/4) and (min-width:600px){
+  .s02 .berg-art{width:min(58%,calc(var(--u)*43),29vh)}
+  .s02 .pf{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:calc(var(--u)*3.2);row-gap:calc(var(--u)*2.4);align-items:start}
+  .s02 .pf .pf-c{grid-column:1/-1;margin-top:0}
+}
+/* Producto en tablet vertical: texto y capacidades a la izquierda, mock-up a la derecha;
+   las vistas de apoyo quedan debajo (se llega desplazando) */
+@media (max-aspect-ratio:5/4) and (min-width:600px){
+  .prod.sx{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto;column-gap:calc(var(--u)*3.2);row-gap:0;align-items:start;align-content:start}
+  .prod.sx .left{display:block;grid-column:1;grid-row:1}
+  .prod.sx .pcaps{grid-column:1;grid-row:2;margin-top:calc(var(--u)*2.4)}
+  .prod.sx .pcaps li:first-child{margin-top:0}
+  .prod.sx .parea,.prod.sx .stg2{display:contents}
+  .prod.sx .stg2 .hero{grid-column:2;grid-row:1/3;align-self:center;margin-top:calc(var(--u)*2)}
+  .prod.sx .stg2 .hdev,.prod.sx .stg2 .device{width:100%}
+  .prod.sx .stg2 .hero>.demo{align-self:center;margin-top:0}
+  .prod.sx .stg2 .shots{grid-column:1/-1;grid-row:3;margin-top:calc(var(--u)*4)}
+}
+
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.001ms!important;animation:none!important}}
 </style>
 <noscript><style>.scene{opacity:1!important;visibility:visible!important;position:relative!important;min-height:100vh}.a,.line>span{opacity:1!important;transform:none!important}#stage{position:static!important}html,body{overflow:auto!important;height:auto!important}</style>
@@ -1024,7 +1075,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 
         <div class="berg-art">
           <div class="berg-depth" aria-hidden="true"></div>
-          <img class="berg-img" src="assets/method/iceberg.png" alt="">
+          <img class="berg-img" src="assets/method/iceberg.webp" alt="">
         </div>
         <span class="wline" aria-hidden="true"></span>
 
@@ -1102,11 +1153,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <h2 class="mega"><span class="line"><span style="--d:.2s">Three ways</span></span><span class="line"><span style="--d:.32s"><em>to create impact</em></span></span></h2>
     </div>
     <div class="pillars">
-      <div class="pillar a" style="--d:.45s"><img src="assets/astara-home/card-research.png" alt=""><span class="edge"></span>
+      <div class="pillar a" style="--d:.45s"><img src="assets/astara-home/card-research.webp" alt=""><span class="edge"></span>
         <div class="txt"><h3>Research &amp; Strategy</h3><div class="tl">Understand the market.</div><p>Market intelligence, foresight and competitive analysis.</p></div></div>
-      <div class="pillar a" style="--d:.55s"><img src="assets/astara-home/card-advisory-neom-aerial.png" alt=""><span class="edge"></span>
+      <div class="pillar a" style="--d:.55s"><img src="assets/astara-home/card-advisory-neom-aerial.webp" alt=""><span class="edge"></span>
         <div class="txt"><h3>Advisory</h3><div class="tl">Shape the response.</div><p>Strategy, planning and customer experience.</p></div></div>
-      <div class="pillar sol a" style="--d:.65s"><img src="assets/astara-home/card-solutions.png" alt=""><span class="edge"></span>
+      <div class="pillar sol a" style="--d:.65s"><img src="assets/astara-home/card-solutions.webp" alt=""><span class="edge"></span>
         <div class="txt"><h3>Solutions</h3>
           <div class="sw"><div class="t-a"><div class="tl">Build the system.</div><p>Platforms, dashboards and data-powered tools.</p></div>
           <div class="t-b" aria-hidden="true"><div class="tl">We turn data into a competitive advantage</div><p>Helping businesses lead in a competitive market through intelligent platforms, advanced analytics and AI.</p></div></div></div></div>
@@ -1134,9 +1185,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     </div>
 
     <div class="sys">
-      <svg class="hexes" viewBox="0 0 2000 830" role="img" aria-label="Digital competitive edge, next-gen digital platforms, accelerated impact solutions"><path class="hx" pathLength="1" style="--d:0.81s" d="M282.0 2.0 L418.8 81.0 L418.8 239.0 L282.0 318.0 L145.2 239.0 L145.2 81.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M568.8 2.0 L705.6 81.0 L705.6 239.0 L568.8 318.0 L432.0 239.0 L432.0 81.0Z"/><path class="hx" pathLength="1" style="--d:0.52s" d="M855.6 2.0 L992.4 81.0 L992.4 239.0 L855.6 318.0 L718.8 239.0 L718.8 81.0Z"/><path class="hx" pathLength="1" style="--d:0.52s" d="M1142.4 2.0 L1279.2 81.0 L1279.2 239.0 L1142.4 318.0 L1005.6 239.0 L1005.6 81.0Z"/><path class="hx" pathLength="1" style="--d:0.66s" d="M1429.2 2.0 L1566.0 81.0 L1566.0 239.0 L1429.2 318.0 L1292.4 239.0 L1292.4 81.0Z"/><path class="hx" pathLength="1" style="--d:0.81s" d="M1716.0 2.0 L1852.8 81.0 L1852.8 239.0 L1716.0 318.0 L1579.2 239.0 L1579.2 81.0Z"/><path class="hx" pathLength="1" style="--d:0.96s" d="M138.0 254.0 L274.8 333.0 L274.8 491.0 L138.0 570.0 L1.2 491.0 L1.2 333.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M712.8 254.0 L849.6 333.0 L849.6 491.0 L712.8 570.0 L576.0 491.0 L576.0 333.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M1287.6 254.0 L1424.4 333.0 L1424.4 491.0 L1287.6 570.0 L1150.8 491.0 L1150.8 333.0Z"/><path class="hx" pathLength="1" style="--d:0.96s" d="M1862.4 254.0 L1999.2 333.0 L1999.2 491.0 L1862.4 570.0 L1725.6 491.0 L1725.6 333.0Z"/><path class="hx" pathLength="1" style="--d:0.97s" d="M282.0 507.0 L418.8 586.0 L418.8 744.0 L282.0 823.0 L145.2 744.0 L145.2 586.0Z"/><path class="hx" pathLength="1" style="--d:0.83s" d="M568.8 507.0 L705.6 586.0 L705.6 744.0 L568.8 823.0 L432.0 744.0 L432.0 586.0Z"/><path class="hx" pathLength="1" style="--d:0.68s" d="M855.6 507.0 L992.4 586.0 L992.4 744.0 L855.6 823.0 L718.8 744.0 L718.8 586.0Z"/><path class="hx" pathLength="1" style="--d:0.68s" d="M1142.4 507.0 L1279.2 586.0 L1279.2 744.0 L1142.4 823.0 L1005.6 744.0 L1005.6 586.0Z"/><path class="hx" pathLength="1" style="--d:0.82s" d="M1429.2 507.0 L1566.0 586.0 L1566.0 744.0 L1429.2 823.0 L1292.4 744.0 L1292.4 586.0Z"/><path class="hx" pathLength="1" style="--d:0.97s" d="M1716.0 507.0 L1852.8 586.0 L1852.8 744.0 L1716.0 823.0 L1579.2 744.0 L1579.2 586.0Z"/><g class="hf" style="--d:1.10s"><path d="M425.4 254.0 L562.2 333.0 L562.2 491.0 L425.4 570.0 L288.6 491.0 L288.6 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="425" y="378"><tspan x="425" dy="0">Digital</tspan><tspan x="425" dy="52">competitive</tspan><tspan x="425" dy="52">edge</tspan></text></g><g class="hf" style="--d:1.28s"><path d="M1000.2 254.0 L1137.0 333.0 L1137.0 491.0 L1000.2 570.0 L863.4 491.0 L863.4 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="1000" y="378"><tspan x="1000" dy="0">Next-gen</tspan><tspan x="1000" dy="52">digital</tspan><tspan x="1000" dy="52">platforms</tspan></text></g><g class="hf" style="--d:1.46s"><path d="M1575.0 254.0 L1711.8 333.0 L1711.8 491.0 L1575.0 570.0 L1438.2 491.0 L1438.2 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="1575" y="378"><tspan x="1575" dy="0">Accelerated</tspan><tspan x="1575" dy="52">impact</tspan><tspan x="1575" dy="52">solutions</tspan></text></g></svg>
+      <svg class="hexes" viewBox="0 0 2000 830" role="img" aria-label="Digital competitive edge, next-gen digital platforms, accelerated impact solutions, and the tools behind them: Automotive Performance Report, Digital Competitive Index, D-Stage, Marketplace Store, Retail Analysis, Salesforce Strategy, Social Media Analysis, Digital Reputation, Predictive Forecast, Customer Journey, Advertising Tracking, Influencers Marketing, Model Diagnosis, Virtual assistant, Marketing Strategy, Company Dashboards"><path class="hx" pathLength="1" style="--d:0.81s" d="M282.0 2.0 L418.8 81.0 L418.8 239.0 L282.0 318.0 L145.2 239.0 L145.2 81.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M568.8 2.0 L705.6 81.0 L705.6 239.0 L568.8 318.0 L432.0 239.0 L432.0 81.0Z"/><path class="hx" pathLength="1" style="--d:0.52s" d="M855.6 2.0 L992.4 81.0 L992.4 239.0 L855.6 318.0 L718.8 239.0 L718.8 81.0Z"/><path class="hx" pathLength="1" style="--d:0.52s" d="M1142.4 2.0 L1279.2 81.0 L1279.2 239.0 L1142.4 318.0 L1005.6 239.0 L1005.6 81.0Z"/><path class="hx" pathLength="1" style="--d:0.66s" d="M1429.2 2.0 L1566.0 81.0 L1566.0 239.0 L1429.2 318.0 L1292.4 239.0 L1292.4 81.0Z"/><path class="hx" pathLength="1" style="--d:0.81s" d="M1716.0 2.0 L1852.8 81.0 L1852.8 239.0 L1716.0 318.0 L1579.2 239.0 L1579.2 81.0Z"/><path class="hx" pathLength="1" style="--d:0.96s" d="M138.0 254.0 L274.8 333.0 L274.8 491.0 L138.0 570.0 L1.2 491.0 L1.2 333.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M712.8 254.0 L849.6 333.0 L849.6 491.0 L712.8 570.0 L576.0 491.0 L576.0 333.0Z"/><path class="hx" pathLength="1" style="--d:0.67s" d="M1287.6 254.0 L1424.4 333.0 L1424.4 491.0 L1287.6 570.0 L1150.8 491.0 L1150.8 333.0Z"/><path class="hx" pathLength="1" style="--d:0.96s" d="M1862.4 254.0 L1999.2 333.0 L1999.2 491.0 L1862.4 570.0 L1725.6 491.0 L1725.6 333.0Z"/><path class="hx" pathLength="1" style="--d:0.97s" d="M282.0 507.0 L418.8 586.0 L418.8 744.0 L282.0 823.0 L145.2 744.0 L145.2 586.0Z"/><path class="hx" pathLength="1" style="--d:0.83s" d="M568.8 507.0 L705.6 586.0 L705.6 744.0 L568.8 823.0 L432.0 744.0 L432.0 586.0Z"/><path class="hx" pathLength="1" style="--d:0.68s" d="M855.6 507.0 L992.4 586.0 L992.4 744.0 L855.6 823.0 L718.8 744.0 L718.8 586.0Z"/><path class="hx" pathLength="1" style="--d:0.68s" d="M1142.4 507.0 L1279.2 586.0 L1279.2 744.0 L1142.4 823.0 L1005.6 744.0 L1005.6 586.0Z"/><path class="hx" pathLength="1" style="--d:0.82s" d="M1429.2 507.0 L1566.0 586.0 L1566.0 744.0 L1429.2 823.0 L1292.4 744.0 L1292.4 586.0Z"/><path class="hx" pathLength="1" style="--d:0.97s" d="M1716.0 507.0 L1852.8 586.0 L1852.8 744.0 L1716.0 823.0 L1579.2 744.0 L1579.2 586.0Z"/><g class="hl"><text style="--d:0.81s" x="282" y="134"><tspan x="282" dy="0">Automotive</tspan><tspan x="282" dy="36">Performance</tspan><tspan x="282" dy="36">Report</tspan></text><text style="--d:0.67s" x="568.8" y="134"><tspan x="568.8" dy="0">Digital</tspan><tspan x="568.8" dy="36">Competitive</tspan><tspan x="568.8" dy="36">Index</tspan></text><text style="--d:0.52s" x="855.6" y="170"><tspan x="855.6" dy="0">D-Stage</tspan></text><text style="--d:0.52s" x="1142.4" y="152"><tspan x="1142.4" dy="0">Marketplace</tspan><tspan x="1142.4" dy="36">Store</tspan></text><text style="--d:0.66s" x="1429.2" y="152"><tspan x="1429.2" dy="0">Retail</tspan><tspan x="1429.2" dy="36">Analysis</tspan></text><text style="--d:0.81s" x="1716" y="152"><tspan x="1716" dy="0">Salesforce</tspan><tspan x="1716" dy="36">Strategy</tspan></text><text style="--d:0.96s" x="138" y="404"><tspan x="138" dy="0">Social Media</tspan><tspan x="138" dy="36">Analysis</tspan></text><text style="--d:0.67s" x="712.8" y="404"><tspan x="712.8" dy="0">Digital</tspan><tspan x="712.8" dy="36">Reputation</tspan></text><text style="--d:0.67s" x="1287.6" y="404"><tspan x="1287.6" dy="0">Predictive</tspan><tspan x="1287.6" dy="36">Forecast</tspan></text><text style="--d:0.96s" x="1862.4" y="404"><tspan x="1862.4" dy="0">Customer</tspan><tspan x="1862.4" dy="36">Journey</tspan></text><text style="--d:0.97s" x="282" y="657"><tspan x="282" dy="0">Advertising</tspan><tspan x="282" dy="36">Tracking</tspan></text><text style="--d:0.83s" x="568.8" y="657"><tspan x="568.8" dy="0">Influencers</tspan><tspan x="568.8" dy="36">Marketing</tspan></text><text style="--d:0.68s" x="855.6" y="657"><tspan x="855.6" dy="0">Model</tspan><tspan x="855.6" dy="36">Diagnosis</tspan></text><text style="--d:0.68s" x="1142.4" y="657"><tspan x="1142.4" dy="0">Virtual</tspan><tspan x="1142.4" dy="36">assistant</tspan></text><text style="--d:0.82s" x="1429.2" y="657"><tspan x="1429.2" dy="0">Marketing</tspan><tspan x="1429.2" dy="36">Strategy</tspan></text><text style="--d:0.97s" x="1716" y="657"><tspan x="1716" dy="0">Company</tspan><tspan x="1716" dy="36">Dashboards</tspan></text></g><g class="hf" style="--d:1.10s"><path d="M425.4 254.0 L562.2 333.0 L562.2 491.0 L425.4 570.0 L288.6 491.0 L288.6 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="425" y="378"><tspan x="425" dy="0">Digital</tspan><tspan x="425" dy="52">competitive</tspan><tspan x="425" dy="52">edge</tspan></text></g><g class="hf" style="--d:1.28s"><path d="M1000.2 254.0 L1137.0 333.0 L1137.0 491.0 L1000.2 570.0 L863.4 491.0 L863.4 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="1000" y="378"><tspan x="1000" dy="0">Next-gen</tspan><tspan x="1000" dy="52">digital</tspan><tspan x="1000" dy="52">platforms</tspan></text></g><g class="hf" style="--d:1.46s"><path d="M1575.0 254.0 L1711.8 333.0 L1711.8 491.0 L1575.0 570.0 L1438.2 491.0 L1438.2 333.0Z"/><text fill="#0b1a3a" font-family="Manrope, system-ui, sans-serif" font-weight="700" font-size="40" text-anchor="middle" x="1575" y="378"><tspan x="1575" dy="0">Accelerated</tspan><tspan x="1575" dy="52">impact</tspan><tspan x="1575" dy="52">solutions</tspan></text></g></svg>
       <button type="button" class="world w-hb" data-world="highbeam">
-        <span class="surf" aria-hidden="true"><span class="pic pic-hb"><img src="assets/bg/highbeam-01.jpg" alt=""></span></span>
+        <span class="surf" aria-hidden="true"><span class="pic pic-hb"><img src="assets/bg/highbeam-01.webp" alt=""></span></span>
         <h3 class="wt">HighBeam</h3>
         <p class="wd">One intelligence layer — from market signal to commercial decision.</p>
         <span class="wx"><span class="wxt">Enter HighBeam</span><b>→</b></span>
@@ -1161,13 +1212,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       </div>
       <div class="dimwrap">
         <div class="dims">
-          <div class="dim glass" data-go="5" role="link" tabindex="0" style="--d:.05s"><img src="assets/solutions/card-strategy.png" alt="">
+          <div class="dim glass" data-go="5" role="link" tabindex="0" style="--d:.05s"><img src="assets/solutions/card-strategy.webp" alt="">
             <div class="t"><h3>Strategy</h3><div class="desc">Market Position &amp; Early Warning.</div><div class="more"><div class="qq">Are we winning or losing relevance today?</div><div class="prd">Digital Competitive Index <span>· DCI</span></div></div></div></div>
-          <div class="dim glass" data-go="6" role="link" tabindex="0" style="--d:.15s"><img src="assets/solutions/card-marketing.png" alt="">
+          <div class="dim glass" data-go="6" role="link" tabindex="0" style="--d:.15s"><img src="assets/solutions/card-marketing.webp" alt="">
             <div class="t"><h3>Marketing</h3><div class="desc">Investment Optimization.</div><div class="more"><div class="qq">Where should we invest to close the gap?</div><div class="prd">Automotive Performance Report <span>· APR</span></div></div></div></div>
-          <div class="dim glass" data-go="7" role="link" tabindex="0" style="--d:.25s"><img src="assets/solutions/card-product.png" alt="">
+          <div class="dim glass" data-go="7" role="link" tabindex="0" style="--d:.25s"><img src="assets/solutions/card-product.webp" alt="">
             <div class="t"><h3>Product</h3><div class="desc">Perception vs. Reality.</div><div class="more"><div class="qq">Why is the market choosing — or rejecting — our product?</div><div class="prd">Model Diagnosis</div></div></div></div>
-          <div class="dim glass" data-go="8" role="link" tabindex="0" style="--d:.35s"><img src="assets/solutions/card-retail.png" alt="">
+          <div class="dim glass" data-go="8" role="link" tabindex="0" style="--d:.35s"><img src="assets/solutions/card-retail.webp" alt="">
             <div class="t"><h3>Retail</h3><div class="desc">Network Execution &amp; Customer Experience.</div><div class="more"><div class="qq">Is the brand promise surviving the dealership experience?</div><div class="prd">Retail Analytics</div></div></div></div>
           <div class="dim glass nw" data-go="9" role="link" tabindex="0" style="--d:.45s"><img src="assets/solutions/card-market.svg" alt=""><span class="ray" aria-hidden="true"></span>
             <div class="t"><div class="hbl"><span class="tag">New</span></div><h3>Pricing Intelligence</h3><div class="desc">Pricing · Sales · Stock · Resale.</div><div class="more"><div class="qq">Are we priced to win?</div><div class="prd">Pricing Intelligence</div></div></div></div>
@@ -1191,18 +1242,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
         <div class="hero">
         <div class="device">
           <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
-          <div class="tilt"><img src="assets/highbeam/suite/dci-tablet.png" alt="DCI radar versus average competitors on a tablet" style="width:100%"><div class="scan"></div><span class="ring"><span class="callout">Vs. your competitive set</span></span></div>
+          <div class="tilt"><img src="assets/highbeam/suite/dci-tablet.webp" alt="DCI radar versus average competitors on a tablet" style="width:100%"><div class="scan"></div><span class="ring"><span class="callout">Vs. your competitive set</span></span></div>
         </div>
           <a class="demo a" style="--d:1.45s" href="#" data-demo="dci" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
         <div class="shots">
           <div class="screen glass shot"><div class="frame">
-          <img src="assets/highbeam/digital-competitive-index/dashboard-indonesia.png" alt="Digital Competitive Index dashboard">
+          <img src="assets/highbeam/digital-competitive-index/dashboard-indonesia.webp" alt="Digital Competitive Index dashboard">
           <span class="dimall"></span>
           <span class="spot k1" style="left:33.7%;top:0;width:33.2%;height:32.4%"><span class="callout">One weighted score</span></span>
           <span class="spot k3" style="left:66.9%;top:0;width:33.1%;height:32.4%"><span class="callout">Visibility alert</span></span>
         </div></div>
-          <figure class="shot ref"><img src="assets/highbeam/digital-competitive-index/ref-1.png" alt="Digital Competitive Index: modules of the online tracking dashboard"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/digital-competitive-index/ref-1.webp" alt="Digital Competitive Index: modules of the online tracking dashboard"></figure>
         </div>
       </div>
     </div>
@@ -1226,7 +1277,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="hv">
           <div class="hdev">
             <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
-            <div class="tilt"><img class="mock" src="assets/highbeam/automotive-performance-report/mockup-apr.png" alt="Automotive Performance Report on a tablet"><div class="scan t2"></div></div>
+            <div class="tilt"><img class="mock" src="assets/highbeam/automotive-performance-report/mockup-apr.webp" alt="Automotive Performance Report on a tablet"><div class="scan t2"></div></div>
           </div>
           <div class="hk k1"><span>Share of voice<br>Our C-SUV</span><b>18%</b></div>
           <div class="hk k2"><span>Gap vs.<br>segment leader</span><b>−7pp</b></div>
@@ -1234,8 +1285,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <a class="demo a" style="--d:1.45s" href="#" data-demo="apr" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
         <div class="shots">
-          <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-1.png" alt="Share of voice and segment charts"></figure>
-          <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-2.jpg" alt="Pick-up segment analysis and digital advertising activity"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-1.webp" alt="Share of voice and segment charts"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/automotive-performance-report/ref-2.webp" alt="Pick-up segment analysis and digital advertising activity"></figure>
         </div>
       </div>
     </div>
@@ -1260,8 +1311,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <div class="hdev">
             <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
             <div class="tilt"><div class="tab ls" role="img" aria-label="Model Diagnosis on a tablet: finding videos and reading the project results"><div class="scr ls">
-              <img class="s1" src="assets/highbeam/model-diagnosis/md-find-videos.jpg" alt="">
-              <img class="s2" src="assets/highbeam/model-diagnosis/md-project-results.jpg" alt="">
+              <img class="s1" src="assets/highbeam/model-diagnosis/md-find-videos.webp" alt="">
+              <img class="s2" src="assets/highbeam/model-diagnosis/md-project-results.webp" alt="">
             </div></div><div class="scan t2"></div></div>
           </div>
           <div class="hk k1"><span>Top objection<br>C-SUV</span><b>Range</b></div>
@@ -1296,7 +1347,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <div class="hv">
           <div class="hdev">
             <span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br brr"></span>
-            <div class="tilt"><img class="mock" src="assets/highbeam/retail-analytics/mockup-retail.png" alt="Retail Analytics on a tablet"><div class="scan t2"></div></div>
+            <div class="tilt"><img class="mock" src="assets/highbeam/retail-analytics/mockup-retail.webp" alt="Retail Analytics on a tablet"><div class="scan t2"></div></div>
           </div>
           <div class="hk k1"><span>Your dealer<br>rating</span><b class="o">3.2★</b></div>
           <div class="hk k2 ok"><span>Competitor<br>next door</span><b>4.8★</b></div>
@@ -1304,8 +1355,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
           <a class="demo a" style="--d:1.45s" href="#" data-demo="ra" role="button"><span class="play"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>Watch the demo</a>
         </div>
         <div class="shots">
-          <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-desktop.png" alt="Retail Analytics dashboard on desktop: map and key figures"></figure>
-          <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-tablet.png" alt="Retail Analytics comparison view on a tablet"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-desktop.webp" alt="Retail Analytics dashboard on desktop: map and key figures"></figure>
+          <figure class="shot ref"><img src="assets/highbeam/retail-analytics/ref-tablet.webp" alt="Retail Analytics comparison view on a tablet"></figure>
         </div>
       </div>
     </div>
@@ -1401,7 +1452,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
       <span class="meta">
       <span class="keys"><span class="k-fine">Click, space or → to continue · F fullscreen</span><span class="k-touch">Swipe or use the arrows</span></span>
       <span class="beats" id="beats"></span>
-      <span class="count" id="count"><b>01</b> / 09</span>
+      <span class="count" id="count"><b>01</b> / 11</span>
       </span>
       <button class="arrow" id="prev" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8H3M7 4 3 8l4 4"/></svg></button>
       <button class="arrow" id="next" aria-label="Next"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
@@ -1557,7 +1608,7 @@ addEventListener('keydown',e=>{
 });
 /* Deep link: #5.2 = escena 5, paso 2 (sin pasos automáticos, para revisar) */
 const m=location.hash.match(/^#(\d+)(?:\.(\d+))?/);
-if(m){cur=Math.min(scenes.length,+m[1])-1;step=Math.min(stepsOf(cur),+(m[2]||0));render(true); if(!m[2]) schedule();}
+if(m){cur=Math.min(scenes.length,Math.max(1,+m[1]))-1;step=Math.min(stepsOf(cur),+(m[2]||0));render(true); if(!m[2]) schedule();}
 else { render(true); schedule(); }
 </script>
 </body>
